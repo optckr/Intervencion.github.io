@@ -173,7 +173,7 @@ body {
   height: 100%;
   top: 0;
   left: 0;
-  background-image: url("assets/bgs/bg.jpg");
+  background-image: url("./assets/bgs/bg.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: scroll;
