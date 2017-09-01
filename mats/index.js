@@ -1,6 +1,6 @@
 (function() {
 
-var app = angular.module('optc', [ 'ui.router', 'ui.bootstrap', 'ngDialog' ]);
+var app = angular.module('saomd', [ 'ui.router', 'ui.bootstrap', 'ngDialog' ]);
 
 var findEvolvers = function(id) {
     var result = [ ];
@@ -465,7 +465,7 @@ app.directive('exportButton',function($storage) {
                 var blob = new Blob([ JSON.stringify(result) ], { type: 'application/json' });
                 var a = document.createElement('a');
                 a.href = URL.createObjectURL(blob);
-                a.download = 'optc.mats.' + (new Date().valueOf()) + '.json';
+                a.download = 'saomd.mats.' + (new Date().valueOf()) + '.json';
                 document.body.appendChild(a);
                 a.click();
                 document.body.removeChild(a);

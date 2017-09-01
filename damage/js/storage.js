@@ -111,7 +111,7 @@ var StorageCtrl = function($scope, $storage) {
 
 };
 
-angular.module('optc')
+angular.module('saomd')
     .controller('StorageCtrl', StorageCtrl);
 
 })();

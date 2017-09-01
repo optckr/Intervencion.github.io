@@ -3,7 +3,7 @@
 var directives = { };
 var filters = { };
 
-var app = angular.module('optc');
+var app = angular.module('saomd');
 
 /**************
  * Directives *

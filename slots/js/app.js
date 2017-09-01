@@ -1,6 +1,6 @@
 (function() {
 
-var app = angular.module('optc', [ 'ui.router', 'ui.bootstrap', 'ngDialog' ]);
+var app = angular.module('saomd', [ 'ui.router', 'ui.bootstrap', 'ngDialog' ]);
 
 Utils.parseUnits(false);
 

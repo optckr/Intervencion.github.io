@@ -84,7 +84,7 @@ var MainCtrl = function($scope, $rootScope, $controller, $filter, $storage) {
 
 };
 
-angular.module('optc')
+angular.module('saomd')
     .controller('MainCtrl', MainCtrl);
 
 })();

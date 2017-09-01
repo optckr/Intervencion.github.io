@@ -10,7 +10,7 @@ var filters = { custom: [ ], classes: [ ], stars: [ ], cost: [ 1, 99 ] };
  * Controllers *
  ***************/
 
-var app = angular.module('optc');
+var app = angular.module('saomd');
 
 app.controller('MainCtrl',function($scope, $rootScope, $state, $stateParams, $timeout, $storage, $controller) {
 

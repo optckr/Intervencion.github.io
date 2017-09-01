@@ -2,7 +2,7 @@
 
 (function() {
 
-var app = angular.module('optc', [ 'ui.router', 'ui.bootstrap', 'ngSanitize', 'chart.js', 'ngDialog' ]);
+var app = angular.module('saomd', [ 'ui.router', 'ui.bootstrap', 'ngSanitize', 'chart.js', 'ngDialog' ]);
 
 Utils.parseUnits(false);
 
@@ -26,7 +26,7 @@ app
         $rootScope.$on('$stateChangeSuccess',function(e) {
             $rootScope.currentState = $state.current.name;
             if (ga) ga('send', 'pageview', '/characters');
-            var title = 'One Piece Treasure Cruise Character Table';
+            var title = 'Sword Art Online Memory Defrag Character Profiles';
             if ($state.current.name == 'main.search.view') {
                 var unit = window.units[parseInt($stateParams.id,10) - 1];
                 title = (unit.name || '?') + ' | ' + title;

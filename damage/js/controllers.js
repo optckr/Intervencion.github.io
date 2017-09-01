@@ -330,7 +330,7 @@ controllers.QuickPickCtrl = function($scope, $state) {
  *****************************/
 
 for (var key in controllers)
-    angular.module('optc')
+    angular.module('saomd')
         .controller(key, controllers[key]);
 
 })();

@@ -1,6 +1,6 @@
 (function() {
 
-var app = angular.module('optc');
+var app = angular.module('saomd');
 
 var COLORS = [ '#ff6666', '#ff9966', '#ffcc33', '#ffff99', '#ccff99', '#99cc66', '#99cccc', '#0099ff', '#cc99ff', '#cc55cc' ];
 

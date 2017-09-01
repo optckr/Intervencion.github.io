@@ -185,9 +185,9 @@
 		function get_cal() {
 			var cal = ics();
 
-			var subject = "OPTC Turtle Time";
-			var description = "One Piece Treasure Cruise Turtle Time";
-			var location = "OPTC";
+			var subject = "SAOMD Urgent EXP Quest";
+			var description = "Sword Art Online Memory Defrag Urgent EXP Quest";
+			var location = "SAOMD";
 			var begin, end;
 
 			for (var i=0; i<2; i++) {
@@ -203,7 +203,7 @@
 			var now = moment();
 			var minutes = notif_time / 1000 / 60;
 			var options = {
-				body: minutes + ' minutes till Turtle Time!',
+				body: minutes + ' minutes till Urgent EXP Quest!',
 				icon: 'favicon.ico'
 			};
 			var time_until;
@@ -221,7 +221,7 @@
 					clearTimeout(notifications[i]);
 
 				notifications[i] = setTimeout(function() {
-					var instance = new Notification("OPTC Turtle Time", options);
+					var instance = new Notification("SAOMD Urgent EXP Quest", options);
 					if (notif_sound)
 						notif_audio.play();
 				}, time_until);
@@ -231,11 +231,11 @@
 		function example_notification() {
 			var minutes = notif_time / 1000 / 60;
 			var options = {
-				body: minutes + ' minutes till Turtle Time!',
+				body: minutes + ' minutes till Urgent EXP Quest!',
 				icon: 'favicon.ico'
 			};
 
-			var instance = new Notification("OPTC Turtle Time", options);
+			var instance = new Notification("SAOMD Urgent EXP Quest", options);
 			if (notif_sound)
 				notif_audio.play();
 		}

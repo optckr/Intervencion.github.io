@@ -204,7 +204,7 @@ var ExportCtrl = function($scope) {
 
 };
 
-angular.module('optc')
+angular.module('saomd')
     .controller('ExportCtrl', ExportCtrl)
     .controller('ImportCtrl', ImportCtrl);
 

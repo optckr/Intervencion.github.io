@@ -359,7 +359,7 @@ controllers.CopyCtrl = function($scope, $storage, $rootScope, $state){
  ******************/
 
 for (var controller in controllers)
-    angular.module('optc')
+    angular.module('saomd')
         .controller(controller, controllers[controller]);
 
 })();

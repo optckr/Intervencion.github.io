@@ -1022,7 +1022,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
 
 };
 
-angular.module('optc')
+angular.module('saomd')
     .controller('CruncherCtrl', CruncherCtrl);
 
 })();

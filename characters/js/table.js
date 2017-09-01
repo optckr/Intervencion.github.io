@@ -1,6 +1,6 @@
 (function() {
 
-angular.module('optc') .run(function($rootScope, $timeout, $storage, MATCHER_IDS) {
+angular.module('saomd') .run(function($rootScope, $timeout, $storage, MATCHER_IDS) {
 
     /**************
      * Table data *

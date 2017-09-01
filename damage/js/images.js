@@ -1,6 +1,6 @@
 (function() {
 
-var app = angular.module('optc');
+var app = angular.module('saomd');
 
 var BOX_COLORS = { STR: 'salmon', QCK: 'lightskyblue', DEX: 'lightgreen', PSY: 'gold', INT: 'orchid' };
 var ORB_COLORS = { STR: 'orangered', QCK: 'dodgerblue', DEX: 'lightgreen', PSY: 'gold', INT: 'orchid', G: 'orange', S: 'orangered', RAINBOW: 'pink', MEAT: 'darkgoldenrod'};

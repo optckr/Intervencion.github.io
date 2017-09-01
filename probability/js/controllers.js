@@ -294,7 +294,7 @@ controllers.PopoverCtrl = function($scope) {
  ******************/
 
 for (var controller in controllers)
-    angular.module('optc')
+    angular.module('saomd')
         .controller(controller, controllers[controller]);
 
 })();

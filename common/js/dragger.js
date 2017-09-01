@@ -144,7 +144,7 @@ var onRemoveZoneDrop = function(scope,target) {
 
 /* * * * * Directive definitions * * * * */
 
-var app = angular.module('optc');
+var app = angular.module('saomd');
 var directives = { };
 
 directives.draggable = function() {

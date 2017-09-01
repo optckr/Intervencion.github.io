@@ -1,6 +1,6 @@
 (function() {
 
-angular.module('optc').config(function($stateProvider, $urlRouterProvider) {
+angular.module('saomd').config(function($stateProvider, $urlRouterProvider) {
 
     $urlRouterProvider.otherwise('/search/');
 
