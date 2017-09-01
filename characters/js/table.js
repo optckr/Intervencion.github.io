@@ -41,15 +41,15 @@ angular.module('saomd') .run(function($rootScope, $timeout, $storage, MATCHER_ID
         var result = [
             { title: 'ID' },
             { title: 'Name', render: addImage },
-            { title: 'Type' },
-            { title: 'Class' },
+            { title: 'Weapon' },
+            { title: 'Element' },
             { title: 'HP' },
+            { title: 'MP' },
             { title: 'ATK' },
-            { title: 'RCV' },
+            { title: 'Critical' },
+            { title: 'Defense' },
+            { title: 'Rarity' },
             { title: 'Cost' },
-            { title: 'Slots' },
-            { title: 'Stars' },
-            { title: 'CL', orderable: false }
         ];
         additionalColumns.forEach(function(x) {
             var title = x

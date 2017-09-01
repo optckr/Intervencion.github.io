@@ -17,20 +17,15 @@
     var parseUnit = function (element, n) {
         if (element.length === 0)
             return [];
-        if (element[15] && element[15].constructor != Array)
-            element[15] = [element[15], element[15], element[15]];
+        if (element[10] && element[10].constructor != Array)
+            element[10] = [element[10], element[10], element[10]];
         var result = {
-            name: element[0], type: element[1],
-            class: element[2], stars: element[3],
-            cost: element[4], combo: element[5],
-            slots: element[6], maxLevel: element[7],
-            maxEXP: element[8], minHP: element[9],
-            minATK: element[10], minRCV: element[11],
-            maxHP: element[12], maxATK: element[13],
-            maxRCV: element[14], growth: {
-                hp: element[15] ? element[15][0] : 0,
-                atk: element[15] ? element[15][1] : 0,
-                rcv: element[15] ? element[15][2] : 0
+            id: element[0], name: element[1],
+            weapon: element[2], element: element[3],
+            rarity: element[4], cost: element[5],
+            HP: element[6], MP: element[7],
+            ATK: element[8], Critical: element[9],
+            Defense: element[10]
             },
             number: n
         };
