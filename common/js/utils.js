@@ -205,7 +205,7 @@
     };
 
     utils.isFodder = function (unit) {
-        return (unit.stars < 2 && !utils.isEvolverBooster(unit)) || FODDER_REGEX.test(unit.name);
+        return (unit.rarity < 2 && !utils.isEvolverBooster(unit)) || FODDER_REGEX.test(unit.name);
     };
 
     utils.isEvolverBooster = function (unit) {

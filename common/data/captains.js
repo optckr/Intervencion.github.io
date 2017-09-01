@@ -1153,10 +1153,10 @@ window.captains = {
         atk: function(p) { return p.unit.type == "STR" ? 1.75 : 1; }
     },
     598: {
-        atk: function(p) { return p.unit.stars < 3 ? 2.5 : 1; }
+        atk: function(p) { return p.unit.rarity < 3 ? 2.5 : 1; }
     },
     599: {
-        atk: function(p) { return p.unit.stars < 3 ? 3 : 1; }
+        atk: function(p) { return p.unit.rarity < 3 ? 3 : 1; }
     },
     600: {
         atk: function(p) { return p.unit.type == "PSY" ? 1.5 : 1; }
@@ -1196,7 +1196,7 @@ window.captains = {
         atk: function(p) { return p.unit.cost <= 20 && p.percHP <= 30.0 ? 2.25 : 1; }
     },
     629: {
-        atk: function(p) { return p.unit.stars <= 3 ? 2 : 1; }
+        atk: function(p) { return p.unit.rarity <= 3 ? 2 : 1; }
     },
     630: {
         atk: function(p) { return p.unit.class.has("Slasher") ? 1.5 : 1; }

@@ -116,7 +116,7 @@ angular.module('saomd') .run(function($rootScope, $timeout, $storage, MATCHER_ID
                         filters.classes.indexOf(unit.class[1]) == -1)) return false;
         }
         // filter by stars
-        if (filters.stars && filters.stars.length && filters.stars.indexOf(unit.stars) == -1) return false;
+        if (filters.stars && filters.stars.length && filters.stars.indexOf(unit.rarity) == -1) return false;
         // filter by cost
         if (filters.costEnabled && (unit.cost < filters.cost[0] || unit.cost > filters.cost[1])) return false;
         // filter by drop
