@@ -30,7 +30,7 @@ app.controller('MainCtrl',function($scope, $rootScope, $state, $stateParams, $ti
     $scope.$watch('query',function(query) {
         if (query === null || query === undefined || $scope.query == $stateParams.query) return;
         $state.go('.',{ query: $scope.query });
-        $scope.table.parameters = CharUtils.generateSearchParameters($scope.query, jQuery.extend({ }, $rootScope.filters));
+        $scope.table.parameters = CharUtils.generateSearcHParameters($scope.query, jQuery.extend({ }, $rootScope.filters));
     });
 
     $controller('DismissalCtrl');
@@ -50,7 +50,7 @@ app.controller('SidebarCtrl',function($scope, $rootScope, $stateParams, $timeout
         $scope.$watch('filters',function(filters) {
             if (!filters || Object.keys(filters).length === 0) return;
             var data = jQuery.extend({ }, $rootScope.filters);
-            $scope.table.parameters = CharUtils.generateSearchParameters($stateParams.query, data);
+            $scope.table.parameters = CharUtils.generateSearcHParameters($stateParams.query, data);
             if (!$scope.$$phase) $scope.$apply();
         },true);
     });
@@ -172,7 +172,7 @@ app.controller('DetailsCtrl',function($scope, $rootScope, $state, $stateParams, 
 
     // hidden elements
     var isPreview = $scope.unit.preview;
-    var hasStats = [ 'minHP', 'minATK', 'minRCV', 'maxHP', 'maxATK', 'maxRCV' ].some(function(x) { return $scope.unit[x]; });
+    var hasStats = [ 'minHP', 'minATK', 'minMP', 'maxHP', 'maxATK', 'maxMP' ].some(function(x) { return $scope.unit[x]; });
     $scope.hidden = {
         stats: isPreview && !hasStats,
         abilities: isPreview && !window.details.hasOwnProperty($scope.id)
@@ -204,28 +204,28 @@ app.controller('DetailsCtrl',function($scope, $rootScope, $state, $stateParams, 
         }
         jQuery.extend($scope.customLevel, {
             enabled: true,
-            atk: CharUtils.getStatOfUnit($scope.unit, 'atk', level),
-            hp: CharUtils.getStatOfUnit($scope.unit, 'hp', level),
-            rcv: CharUtils.getStatOfUnit($scope.unit, 'rcv', level),
+            ATK: CharUtils.getStatOfUnit($scope.unit, 'ATK', level),
+            HP: CharUtils.getStatOfUnit($scope.unit, 'HP', level),
+            MP: CharUtils.getStatOfUnit($scope.unit, 'MP', level),
         });
     });
 
     // radar
     if ($scope.unit.incomplete) return;
     $scope.radar = {
-        labels: [ 'HP', 'ATK', 'RCV' ],
+        labels: [ 'HP', 'ATK', 'MP' ],
         data: [ [
             $scope.unit.maxHP / 4000 * 100,
             $scope.unit.maxATK / 1500 * 100,
-            Math.max(0, $scope.unit.maxRCV / 550 * 100)
+            Math.max(0, $scope.unit.maxMP / 550 * 100)
         ] ],
         options: {
             scaleOverride: true,
             scaleSteps: 10,
             scaleStepWidth: 10,
             sclaeStartValue: 0,
-            tooltipTemplate: '<%= Math.round(value * { HP: 4000, ATK: 1500, RCV: 550 }[label] / 100) + " " + label %>',
-            multiTooltipTemplate: '<%= Math.round(value * { HP: 4000, ATK: 1500, RCV: 550 }[label] / 100) %>'
+            tooltipTemplate: '<%= Math.round(value * { HP: 4000, ATK: 1500, MP: 550 }[label] / 100) + " " + label %>',
+            multiTooltipTemplate: '<%= Math.round(value * { HP: 4000, ATK: 1500, MP: 550 }[label] / 100) %>'
         }
     };
     
@@ -239,70 +239,70 @@ app.controller('DetailsCtrl',function($scope, $rootScope, $state, $stateParams, 
             labels: [1,Math.ceil($scope.unit.maxLevel*0.1) , Math.ceil($scope.unit.maxLevel*0.2), Math.ceil($scope.unit.maxLevel*0.3), Math.ceil($scope.unit.maxLevel*0.4), Math.ceil($scope.unit.maxLevel*0.5), Math.ceil($scope.unit.maxLevel*0.6),Math.ceil($scope.unit.maxLevel*0.7), Math.ceil($scope.unit.maxLevel*0.8), Math.ceil($scope.unit.maxLevel*0.9), $scope.unit.maxLevel],
             series: [$scope.unit.name+' HP'],
             data: [
-                [CharUtils.getStatOfUnit($scope.unit, 'hp', 1),
-                 CharUtils.getStatOfUnit($scope.unit, 'hp', Math.ceil($scope.unit.maxLevel*0.1)),
-                 CharUtils.getStatOfUnit($scope.unit, 'hp', Math.ceil($scope.unit.maxLevel*0.2)),
-                 CharUtils.getStatOfUnit($scope.unit, 'hp', Math.ceil($scope.unit.maxLevel*0.3)),
-                 CharUtils.getStatOfUnit($scope.unit, 'hp', Math.ceil($scope.unit.maxLevel*0.4)),
-                 CharUtils.getStatOfUnit($scope.unit, 'hp', Math.ceil($scope.unit.maxLevel*0.5)),
-                 CharUtils.getStatOfUnit($scope.unit, 'hp', Math.ceil($scope.unit.maxLevel*0.6)),
-                 CharUtils.getStatOfUnit($scope.unit, 'hp', Math.ceil($scope.unit.maxLevel*0.7)),
-                 CharUtils.getStatOfUnit($scope.unit, 'hp', Math.ceil($scope.unit.maxLevel*0.8)),
-                 CharUtils.getStatOfUnit($scope.unit, 'hp', Math.ceil($scope.unit.maxLevel*0.9)),
+                [CharUtils.getStatOfUnit($scope.unit, 'HP', 1),
+                 CharUtils.getStatOfUnit($scope.unit, 'HP', Math.ceil($scope.unit.maxLevel*0.1)),
+                 CharUtils.getStatOfUnit($scope.unit, 'HP', Math.ceil($scope.unit.maxLevel*0.2)),
+                 CharUtils.getStatOfUnit($scope.unit, 'HP', Math.ceil($scope.unit.maxLevel*0.3)),
+                 CharUtils.getStatOfUnit($scope.unit, 'HP', Math.ceil($scope.unit.maxLevel*0.4)),
+                 CharUtils.getStatOfUnit($scope.unit, 'HP', Math.ceil($scope.unit.maxLevel*0.5)),
+                 CharUtils.getStatOfUnit($scope.unit, 'HP', Math.ceil($scope.unit.maxLevel*0.6)),
+                 CharUtils.getStatOfUnit($scope.unit, 'HP', Math.ceil($scope.unit.maxLevel*0.7)),
+                 CharUtils.getStatOfUnit($scope.unit, 'HP', Math.ceil($scope.unit.maxLevel*0.8)),
+                 CharUtils.getStatOfUnit($scope.unit, 'HP', Math.ceil($scope.unit.maxLevel*0.9)),
                  $scope.unit.maxHP]
             ]};
     $scope.radarATK = {
             labels: [1,Math.ceil($scope.unit.maxLevel*0.1) , Math.ceil($scope.unit.maxLevel*0.2), Math.ceil($scope.unit.maxLevel*0.3), Math.ceil($scope.unit.maxLevel*0.4), Math.ceil($scope.unit.maxLevel*0.5), Math.ceil($scope.unit.maxLevel*0.6),Math.ceil($scope.unit.maxLevel*0.7), Math.ceil($scope.unit.maxLevel*0.8), Math.ceil($scope.unit.maxLevel*0.9), $scope.unit.maxLevel],
             series: [$scope.unit.name+' ATK'],
             data: [
-                [CharUtils.getStatOfUnit($scope.unit, 'atk', 1),
-                 CharUtils.getStatOfUnit($scope.unit, 'atk', Math.ceil($scope.unit.maxLevel*0.1)),
-                 CharUtils.getStatOfUnit($scope.unit, 'atk', Math.ceil($scope.unit.maxLevel*0.2)),
-                 CharUtils.getStatOfUnit($scope.unit, 'atk', Math.ceil($scope.unit.maxLevel*0.3)),
-                 CharUtils.getStatOfUnit($scope.unit, 'atk', Math.ceil($scope.unit.maxLevel*0.4)),
-                 CharUtils.getStatOfUnit($scope.unit, 'atk', Math.ceil($scope.unit.maxLevel*0.5)),
-                 CharUtils.getStatOfUnit($scope.unit, 'atk', Math.ceil($scope.unit.maxLevel*0.6)),
-                 CharUtils.getStatOfUnit($scope.unit, 'atk', Math.ceil($scope.unit.maxLevel*0.7)),
-                 CharUtils.getStatOfUnit($scope.unit, 'atk', Math.ceil($scope.unit.maxLevel*0.8)),
-                 CharUtils.getStatOfUnit($scope.unit, 'atk', Math.ceil($scope.unit.maxLevel*0.9)),
+                [CharUtils.getStatOfUnit($scope.unit, 'ATK', 1),
+                 CharUtils.getStatOfUnit($scope.unit, 'ATK', Math.ceil($scope.unit.maxLevel*0.1)),
+                 CharUtils.getStatOfUnit($scope.unit, 'ATK', Math.ceil($scope.unit.maxLevel*0.2)),
+                 CharUtils.getStatOfUnit($scope.unit, 'ATK', Math.ceil($scope.unit.maxLevel*0.3)),
+                 CharUtils.getStatOfUnit($scope.unit, 'ATK', Math.ceil($scope.unit.maxLevel*0.4)),
+                 CharUtils.getStatOfUnit($scope.unit, 'ATK', Math.ceil($scope.unit.maxLevel*0.5)),
+                 CharUtils.getStatOfUnit($scope.unit, 'ATK', Math.ceil($scope.unit.maxLevel*0.6)),
+                 CharUtils.getStatOfUnit($scope.unit, 'ATK', Math.ceil($scope.unit.maxLevel*0.7)),
+                 CharUtils.getStatOfUnit($scope.unit, 'ATK', Math.ceil($scope.unit.maxLevel*0.8)),
+                 CharUtils.getStatOfUnit($scope.unit, 'ATK', Math.ceil($scope.unit.maxLevel*0.9)),
                  $scope.unit.maxATK]
             ]};
-        $scope.radarRCV = {
+        $scope.radarMP = {
             labels: [1,Math.ceil($scope.unit.maxLevel*0.1) , Math.ceil($scope.unit.maxLevel*0.2), Math.ceil($scope.unit.maxLevel*0.3), Math.ceil($scope.unit.maxLevel*0.4), Math.ceil($scope.unit.maxLevel*0.5), Math.ceil($scope.unit.maxLevel*0.6),Math.ceil($scope.unit.maxLevel*0.7), Math.ceil($scope.unit.maxLevel*0.8), Math.ceil($scope.unit.maxLevel*0.9), $scope.unit.maxLevel],
-            series: [$scope.unit.name+' RCV'],
+            series: [$scope.unit.name+' MP'],
             data: [
-                [CharUtils.getStatOfUnit($scope.unit, 'rcv', 1),
-                 CharUtils.getStatOfUnit($scope.unit, 'rcv', Math.ceil($scope.unit.maxLevel*0.1)),
-                 CharUtils.getStatOfUnit($scope.unit, 'rcv', Math.ceil($scope.unit.maxLevel*0.2)),
-                 CharUtils.getStatOfUnit($scope.unit, 'rcv', Math.ceil($scope.unit.maxLevel*0.3)),
-                 CharUtils.getStatOfUnit($scope.unit, 'rcv', Math.ceil($scope.unit.maxLevel*0.4)),
-                 CharUtils.getStatOfUnit($scope.unit, 'rcv', Math.ceil($scope.unit.maxLevel*0.5)),
-                 CharUtils.getStatOfUnit($scope.unit, 'rcv', Math.ceil($scope.unit.maxLevel*0.6)),
-                 CharUtils.getStatOfUnit($scope.unit, 'rcv', Math.ceil($scope.unit.maxLevel*0.7)),
-                 CharUtils.getStatOfUnit($scope.unit, 'rcv', Math.ceil($scope.unit.maxLevel*0.8)),
-                 CharUtils.getStatOfUnit($scope.unit, 'rcv', Math.ceil($scope.unit.maxLevel*0.9)),
-                 $scope.unit.maxRCV]
+                [CharUtils.getStatOfUnit($scope.unit, 'MP', 1),
+                 CharUtils.getStatOfUnit($scope.unit, 'MP', Math.ceil($scope.unit.maxLevel*0.1)),
+                 CharUtils.getStatOfUnit($scope.unit, 'MP', Math.ceil($scope.unit.maxLevel*0.2)),
+                 CharUtils.getStatOfUnit($scope.unit, 'MP', Math.ceil($scope.unit.maxLevel*0.3)),
+                 CharUtils.getStatOfUnit($scope.unit, 'MP', Math.ceil($scope.unit.maxLevel*0.4)),
+                 CharUtils.getStatOfUnit($scope.unit, 'MP', Math.ceil($scope.unit.maxLevel*0.5)),
+                 CharUtils.getStatOfUnit($scope.unit, 'MP', Math.ceil($scope.unit.maxLevel*0.6)),
+                 CharUtils.getStatOfUnit($scope.unit, 'MP', Math.ceil($scope.unit.maxLevel*0.7)),
+                 CharUtils.getStatOfUnit($scope.unit, 'MP', Math.ceil($scope.unit.maxLevel*0.8)),
+                 CharUtils.getStatOfUnit($scope.unit, 'MP', Math.ceil($scope.unit.maxLevel*0.9)),
+                 $scope.unit.maxMP]
             ]};
     }else{
         $scope.radarHP = {
             labels: ['1',$scope.unit.maxLevel],
             series: ['HP'],
             data: [
-                [CharUtils.getStatOfUnit($scope.unit, 'hp', 1) , $scope.unit.maxHP]
+                [CharUtils.getStatOfUnit($scope.unit, 'HP', 1) , $scope.unit.maxHP]
             ]
         };
         $scope.radarATK = {
             labels: ['1',$scope.unit.maxLevel],
             series: ['ATK'],
             data: [
-                [CharUtils.getStatOfUnit($scope.unit, 'atk', 1) , $scope.unit.maxATK]
+                [CharUtils.getStatOfUnit($scope.unit, 'ATK', 1) , $scope.unit.maxATK]
             ]
         };
-        $scope.radarRCV = {
+        $scope.radarMP = {
             labels: ['1',$scope.unit.maxLevel],
-            series: ['RCV'],
+            series: ['MP'],
             data: [
-                [CharUtils.getStatOfUnit($scope.unit, 'rcv', 1) , $scope.unit.maxRCV]
+                [CharUtils.getStatOfUnit($scope.unit, 'MP', 1) , $scope.unit.maxMP]
             ]
         };
     }
@@ -314,56 +314,56 @@ app.controller('DetailsCtrl',function($scope, $rootScope, $state, $stateParams, 
         $scope.radarHP.series = $scope.radarHP.series.slice(0,1);
         $scope.radarATK.data = $scope.radarATK.data.slice(0,1);
         $scope.radarATK.series = $scope.radarATK.series.slice(0,1);
-        $scope.radarRCV.data = $scope.radarRCV.data.slice(0,1);
-        $scope.radarRCV.series = $scope.radarRCV.series.slice(0,1);
+        $scope.radarMP.data = $scope.radarMP.data.slice(0,1);
+        $scope.radarMP.series = $scope.radarMP.series.slice(0,1);
         if (compare) {
             $scope.radar.data.push([
                 $scope.compare.maxHP / 4000 * 100,
                 $scope.compare.maxATK / 1500 * 100,
-                Math.max(0, $scope.compare.maxRCV / 550 * 100)
+                Math.max(0, $scope.compare.maxMP / 550 * 100)
             ]);
             
             $scope.radarHP.series.push($scope.compare.name+' HP');
             $scope.radarHP.data.push(
-                [CharUtils.getStatOfUnit($scope.compare, 'hp', 1),
-                 CharUtils.getStatOfUnit($scope.compare, 'hp', Math.ceil($scope.compare.maxLevel*0.1)),
-                 CharUtils.getStatOfUnit($scope.compare, 'hp', Math.ceil($scope.compare.maxLevel*0.2)),
-                 CharUtils.getStatOfUnit($scope.compare, 'hp', Math.ceil($scope.compare.maxLevel*0.3)),
-                 CharUtils.getStatOfUnit($scope.compare, 'hp', Math.ceil($scope.compare.maxLevel*0.4)),
-                 CharUtils.getStatOfUnit($scope.compare, 'hp', Math.ceil($scope.compare.maxLevel*0.5)),
-                 CharUtils.getStatOfUnit($scope.compare, 'hp', Math.ceil($scope.compare.maxLevel*0.6)),
-                 CharUtils.getStatOfUnit($scope.compare, 'hp', Math.ceil($scope.compare.maxLevel*0.7)),
-                 CharUtils.getStatOfUnit($scope.compare, 'hp', Math.ceil($scope.compare.maxLevel*0.8)),
-                 CharUtils.getStatOfUnit($scope.compare, 'hp', Math.ceil($scope.compare.maxLevel*0.9)),
+                [CharUtils.getStatOfUnit($scope.compare, 'HP', 1),
+                 CharUtils.getStatOfUnit($scope.compare, 'HP', Math.ceil($scope.compare.maxLevel*0.1)),
+                 CharUtils.getStatOfUnit($scope.compare, 'HP', Math.ceil($scope.compare.maxLevel*0.2)),
+                 CharUtils.getStatOfUnit($scope.compare, 'HP', Math.ceil($scope.compare.maxLevel*0.3)),
+                 CharUtils.getStatOfUnit($scope.compare, 'HP', Math.ceil($scope.compare.maxLevel*0.4)),
+                 CharUtils.getStatOfUnit($scope.compare, 'HP', Math.ceil($scope.compare.maxLevel*0.5)),
+                 CharUtils.getStatOfUnit($scope.compare, 'HP', Math.ceil($scope.compare.maxLevel*0.6)),
+                 CharUtils.getStatOfUnit($scope.compare, 'HP', Math.ceil($scope.compare.maxLevel*0.7)),
+                 CharUtils.getStatOfUnit($scope.compare, 'HP', Math.ceil($scope.compare.maxLevel*0.8)),
+                 CharUtils.getStatOfUnit($scope.compare, 'HP', Math.ceil($scope.compare.maxLevel*0.9)),
                  $scope.compare.maxHP]
             );
             $scope.radarATK.series.push($scope.compare.name+' ATK');
             $scope.radarATK.data.push(
-                [CharUtils.getStatOfUnit($scope.compare, 'atk', 1),
-                 CharUtils.getStatOfUnit($scope.compare, 'atk', Math.ceil($scope.compare.maxLevel*0.1)),
-                 CharUtils.getStatOfUnit($scope.compare, 'atk', Math.ceil($scope.compare.maxLevel*0.2)),
-                 CharUtils.getStatOfUnit($scope.compare, 'atk', Math.ceil($scope.compare.maxLevel*0.3)),
-                 CharUtils.getStatOfUnit($scope.compare, 'atk', Math.ceil($scope.compare.maxLevel*0.4)),
-                 CharUtils.getStatOfUnit($scope.compare, 'atk', Math.ceil($scope.compare.maxLevel*0.5)),
-                 CharUtils.getStatOfUnit($scope.compare, 'atk', Math.ceil($scope.compare.maxLevel*0.6)),
-                 CharUtils.getStatOfUnit($scope.compare, 'atk', Math.ceil($scope.compare.maxLevel*0.7)),
-                 CharUtils.getStatOfUnit($scope.compare, 'atk', Math.ceil($scope.compare.maxLevel*0.8)),
-                 CharUtils.getStatOfUnit($scope.compare, 'atk', Math.ceil($scope.compare.maxLevel*0.9)),
+                [CharUtils.getStatOfUnit($scope.compare, 'ATK', 1),
+                 CharUtils.getStatOfUnit($scope.compare, 'ATK', Math.ceil($scope.compare.maxLevel*0.1)),
+                 CharUtils.getStatOfUnit($scope.compare, 'ATK', Math.ceil($scope.compare.maxLevel*0.2)),
+                 CharUtils.getStatOfUnit($scope.compare, 'ATK', Math.ceil($scope.compare.maxLevel*0.3)),
+                 CharUtils.getStatOfUnit($scope.compare, 'ATK', Math.ceil($scope.compare.maxLevel*0.4)),
+                 CharUtils.getStatOfUnit($scope.compare, 'ATK', Math.ceil($scope.compare.maxLevel*0.5)),
+                 CharUtils.getStatOfUnit($scope.compare, 'ATK', Math.ceil($scope.compare.maxLevel*0.6)),
+                 CharUtils.getStatOfUnit($scope.compare, 'ATK', Math.ceil($scope.compare.maxLevel*0.7)),
+                 CharUtils.getStatOfUnit($scope.compare, 'ATK', Math.ceil($scope.compare.maxLevel*0.8)),
+                 CharUtils.getStatOfUnit($scope.compare, 'ATK', Math.ceil($scope.compare.maxLevel*0.9)),
                  $scope.compare.maxATK]
             );
-            $scope.radarRCV.series.push($scope.compare.name+' RCV');
-            $scope.radarRCV.data.push(
-                [CharUtils.getStatOfUnit($scope.compare, 'rcv', 1),
-                 CharUtils.getStatOfUnit($scope.compare, 'rcv', Math.ceil($scope.compare.maxLevel*0.1)),
-                 CharUtils.getStatOfUnit($scope.compare, 'rcv', Math.ceil($scope.compare.maxLevel*0.2)),
-                 CharUtils.getStatOfUnit($scope.compare, 'rcv', Math.ceil($scope.compare.maxLevel*0.3)),
-                 CharUtils.getStatOfUnit($scope.compare, 'rcv', Math.ceil($scope.compare.maxLevel*0.4)),
-                 CharUtils.getStatOfUnit($scope.compare, 'rcv', Math.ceil($scope.compare.maxLevel*0.5)),
-                 CharUtils.getStatOfUnit($scope.compare, 'rcv', Math.ceil($scope.compare.maxLevel*0.6)),
-                 CharUtils.getStatOfUnit($scope.compare, 'rcv', Math.ceil($scope.compare.maxLevel*0.7)),
-                 CharUtils.getStatOfUnit($scope.compare, 'rcv', Math.ceil($scope.compare.maxLevel*0.8)),
-                 CharUtils.getStatOfUnit($scope.compare, 'rcv', Math.ceil($scope.compare.maxLevel*0.9)),
-                 $scope.compare.maxRCV]
+            $scope.radarMP.series.push($scope.compare.name+' MP');
+            $scope.radarMP.data.push(
+                [CharUtils.getStatOfUnit($scope.compare, 'MP', 1),
+                 CharUtils.getStatOfUnit($scope.compare, 'MP', Math.ceil($scope.compare.maxLevel*0.1)),
+                 CharUtils.getStatOfUnit($scope.compare, 'MP', Math.ceil($scope.compare.maxLevel*0.2)),
+                 CharUtils.getStatOfUnit($scope.compare, 'MP', Math.ceil($scope.compare.maxLevel*0.3)),
+                 CharUtils.getStatOfUnit($scope.compare, 'MP', Math.ceil($scope.compare.maxLevel*0.4)),
+                 CharUtils.getStatOfUnit($scope.compare, 'MP', Math.ceil($scope.compare.maxLevel*0.5)),
+                 CharUtils.getStatOfUnit($scope.compare, 'MP', Math.ceil($scope.compare.maxLevel*0.6)),
+                 CharUtils.getStatOfUnit($scope.compare, 'MP', Math.ceil($scope.compare.maxLevel*0.7)),
+                 CharUtils.getStatOfUnit($scope.compare, 'MP', Math.ceil($scope.compare.maxLevel*0.8)),
+                 CharUtils.getStatOfUnit($scope.compare, 'MP', Math.ceil($scope.compare.maxLevel*0.9)),
+                 $scope.compare.maxMP]
             );
         }
         if (!$scope.$$phase) $scope.$apply();
@@ -373,7 +373,7 @@ app.controller('DetailsCtrl',function($scope, $rootScope, $state, $stateParams, 
 
 app.controller('ColumnsCtrl',function($scope, $rootScope, $state, $stateParams, $storage) {
 
-    $scope.columns = { 'HP/ATK': false, 'HP/RCV': false, 'ATK/RCV': false, 'ATK/CMB': false,
+    $scope.columns = { 'HP/ATK': false, 'HP/MP': false, 'ATK/MP': false, 'ATK/CMB': false,
         'CMB': false, 'ATK/cost': false, 'HP/cost': false, 'Minimum cooldown': false,
         'Initial cooldown': false,'MAX EXP': false };
 
