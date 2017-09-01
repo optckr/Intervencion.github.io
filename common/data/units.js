@@ -4,13 +4,6 @@ window.units = [
 	[ "12001", "Kirito [Former Beta Tester]", "Sword", "Neutral", 2, null, 6390, 132, 1548, 1435, 1236],
 	[ "12002", "Klein", "Sword", "Neutral", 2, null, 6262, 132, 1578, 1464, 1211],
 	[ "12003", "Diavel", "Sword", "Neutral", 2, null, 6485, 125, 1509, 1413, 1261],
-	[ "12004", "Corvatz", "Sword", "Neutral", Rarity, Cost, HP, MP, ATK, Critical, Defense],
-	[ "ID", "Name", "Weapon", "Element", Rarity, Cost, HP, MP, ATK, Critical, Defense],
-	[ "ID", "Name", "Weapon", "Element", Rarity, Cost, HP, MP, ATK, Critical, Defense],
-	[ "ID", "Name", "Weapon", "Element", Rarity, Cost, HP, MP, ATK, Critical, Defense],
-	[ "ID", "Name", "Weapon", "Element", Rarity, Cost, HP, MP, ATK, Critical, Defense],
-	[ "ID", "Name", "Weapon", "Element", Rarity, Cost, HP, MP, ATK, Critical, Defense],
-	[ "ID", "Name", "Weapon", "Element", Rarity, Cost, HP, MP, ATK, Critical, Defense],
     ];
     
 // [ "Name", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
