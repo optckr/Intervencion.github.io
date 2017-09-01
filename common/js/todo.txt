@@ -1,0 +1,3 @@
+utils: repasar y limpiar después de hacer la DB
+services: cambiar #3 [angular.module('optc')
+Error: cambiar links y tal
