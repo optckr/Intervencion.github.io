@@ -271,7 +271,7 @@ CharUtils.hasFarmableSocket = function(id) {
     
     //return false if unit has no Sockets?
     var unit = window.units[id];
-    if (unit.MP<1) return farmableSocket;
+    if (unit.slots<1) return farmableSocket;
     
     window.families.forEach(function(family,n){
        if (ownFamily == family) {

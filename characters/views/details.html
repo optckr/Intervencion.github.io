@@ -63,8 +63,8 @@
                                 <tr>
                                     <td ng-if="!compare">{{unit.combo}}</td>
                                     <td ng-if="compare" comparison="negative">{{unit.combo - compare.combo}}</td>
-                                    <td ng-if="!compare">{{unit.preview ? '' : unit.MP}}</td>
-                                    <td ng-if="compare" comparison="positive">{{unit.MP - compare.slots}}</td>
+                                    <td ng-if="!compare">{{unit.preview ? '' : unit.slots}}</td>
+                                    <td ng-if="compare" comparison="positive">{{unit.slots - compare.slots}}</td>
                                     <td>{{unit.maxLevel}}</td>
                                     <td ng-if="!compare" colspan="{{hybrid ? 2 : 1}}">{{unit.maxEXP | number}}</td>
                                     <td ng-if="compare" colspan="{{hybrid ? 2 : 1}}" comparison="negative">{{unit.maxEXP - compare.maxEXP | number}}</td>

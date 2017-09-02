@@ -153,7 +153,7 @@ controllers.MainCtrl = ['$scope', '$rootScope', '$state', '$stateParams', '$cont
 		var unit = character;
 		if (!unit || !unit.uid) tokens.push('!');
 		else {
-			var temp = unit.MP
+			var temp = unit.slots
 				.filter(function(x) { return x; })
 				.map(function(x) { return x.id + '' + x.level; })
 				.join('');
