@@ -25,8 +25,7 @@
             rarity: element[4], cost: element[5],
             HP: element[6], MP: element[7],
             ATK: element[8], Critical: element[9],
-            Defense: element[10]
-            },
+            Defense: element[10],
             number: n
         };
         if (element.indexOf(null) != -1)
