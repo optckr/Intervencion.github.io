@@ -1,14 +1,6 @@
 window.units = [
     [ "Kirito", "11001", ["Sword", "Neutral"], 1, 0, 0, 0, 100, 1, 0, 0, 0, 5331, 118, 1129, 1 ],
     [ "Kirito [Former Beta Tester]", "12001", ["Sword", "Neutral"], 2, 0, 0, 0, 100, 1, 0, 0, 0, 6390, 132, 1548, 1 ],
-    [ "Klein", "12002", ["Sword", "Neutral"], 2, null, null, null, 100, null, null, null, null, 6262, 132, 1578, null ],
-    [ "Klein", "12002", ["Sword", "Neutral"], 2, null, null, null, 100, null, null, null, null, 6262, 132, 1578, null ],
-    [ "Klein", "12002", ["Sword", "Neutral"], 2, null, null, null, 100, null, null, null, null, 6262, 132, 1578, null ],
-    [ "Klein", "12002", ["Sword", "Neutral"], 2, null, null, null, 100, null, null, null, null, 6262, 132, 1578, null ],
-    [ "Klein", "12002", ["Sword", "Neutral"], 2, null, null, null, 100, null, null, null, null, 6262, 132, 1578, null ],
-    [ "Klein", "12002", ["Sword", "Neutral"], 2, null, null, null, 100, null, null, null, null, 6262, 132, 1578, null ],
-    [ "Klein", "12002", ["Sword", "Neutral"], 2, null, null, null, 100, null, null, null, null, 6262, 132, 1578, null ],
-    [ "Klein", "12002", ["Sword", "Neutral"], 2, null, null, null, 100, null, null, null, null, 6262, 132, 1578, null ],
     [ "Monkey D. Luffy Gear 2", "STR", [ "Fighter", "Free Spirit" ], 5, 15, 8, 3, 99, 3000000, 902, 473, 74, 1772, 1313, 227, 1 ],
     ];
     
