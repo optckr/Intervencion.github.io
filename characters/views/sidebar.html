@@ -2,14 +2,14 @@
 
 <div class="filter-container">
     <span class="filter-header">Type filters</span>
-    <span ng-model="filters.type" ng-repeat="(n,type) in [ 'STR', 'QCK', 'DEX', 'PSY', 'INT' ]"
+    <span ng-model="filters.type" ng-repeat="(n,type) in [ 'Fire', 'Wind', 'Water', 'Earth', 'Dark', 'Holy', 'Neutral' ]"
         class="filter {{n < 3 ? 'width-4' : 'width-6'}} type {{type}}" ng-class="{ active: filters.type == type }"
         ng-click="onFilterClick($event,type)">{{type}}</span>
 </div>
 
 <div class="filter-container">
     <span class="filter-header">Class filters</span>
-    <span ng-repeat="(n,class) in [ 'Fighter', 'Shooter', 'Slasher', 'Striker', 'Free Spirit', 'Cerebral', 'Powerhouse', 'Driven', 'Evolver', 'Booster' ]"
+    <span ng-repeat="(n,class) in [ 'Sword', 'Dual Blades', 'Rapier', 'Dagger', 'Mace', 'Gun', 'Bow', 'Rod', 'Lance', 'Sword & Shield' ]"
         class="filter width-6 class" ng-click="onClassClick($event,class)"
         ng-class="{ active: filters.classes.indexOf(class) > -1 }">{{class}}</span>
 </div>
