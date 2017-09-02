@@ -1,5 +1,5 @@
 window.units = [
-//    [ "Kirito", "11001", ["Sword", "Neutral"], 1, null, null, null, 100, null, null, null, null, 5331, 118, 1129, 1 ],
+    [ "Kirito", "11001", ["Sword", "Neutral"], 1, null, null, null, 100, null, null, null, null, 5331, 118, 1129, 1 ],
     [ "Ben Beckman, 'Four Emperors' Red Hair's Right Hand Man", "INT", [ "Cerebral", "Striker" ], 5, 30, 4, 4, 99, 4000000, null, null, null, 2295, 1384, 367, null ],
     ];
     
