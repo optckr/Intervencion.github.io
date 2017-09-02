@@ -5,7 +5,7 @@ window.units = [
     [ "Diavel", "12003", ["Sword", "Neutral"], 2, null, null, null, 100, null, null, null, null, 6485, 125, 1509, null ],
     [ "Corvatz", "12004", ["Sword", "Neutral"], 2, null, null, null, 100, null, null, null, null, 6613, 125, 1494, null ],
     [ "Thinker", "12005", ["Sword", "Neutral"], 2, null, null, null, 100, null, null, null, null, 6357, 125, 1563, null ],
-    [ "Klein", "12002", ["Sword", "Neutral"], 2, null, null, null, 100, null, null, null, null, 6262, 132, 1578, null ],
+    [ "Sigurd", "12006", ["Sword", "Wind"], 2, null, null, null, 100, null, null, null, null, 6454, 125, 1555, null ],
     [ "Klein", "12002", ["Sword", "Neutral"], 2, null, null, null, 100, null, null, null, null, 6262, 132, 1578, null ],
     [ "Klein", "12002", ["Sword", "Neutral"], 2, null, null, null, 100, null, null, null, null, 6262, 132, 1578, null ],
     [ "Klein", "12002", ["Sword", "Neutral"], 2, null, null, null, 100, null, null, null, null, 6262, 132, 1578, null ],
