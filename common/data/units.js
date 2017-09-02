@@ -2,7 +2,7 @@ window.units = [
     [ "Kirito", "11001", ["Sword", "Neutral"], 1, null, null, null, 100, null, null, null, null, 5331, 118, 1129, null ],
     [ "Kirito [Former Beta Tester]", "12001", ["Sword", "Neutral"], 2, null, null, null, 100, null, null, null, null, 6390, 132, 1548, null ],
     [ "Klein", "12002", ["Sword", "Neutral"], 2, null, null, null, 100, null, null, null, null, 6262, 132, 1578, null ],
-    [ "Klein", "12002", ["Sword", "Neutral"], 2, null, null, null, 100, null, null, null, null, 6262, 132, 1578, null ],
+    [ "Diavel", "12003", ["Sword", "Neutral"], 2, null, null, null, 100, null, null, null, null, 6485, 125, 1509, null ],
     [ "Klein", "12002", ["Sword", "Neutral"], 2, null, null, null, 100, null, null, null, null, 6262, 132, 1578, null ],
     [ "Klein", "12002", ["Sword", "Neutral"], 2, null, null, null, 100, null, null, null, null, 6262, 132, 1578, null ],
     [ "Klein", "12002", ["Sword", "Neutral"], 2, null, null, null, 100, null, null, null, null, 6262, 132, 1578, null ],
