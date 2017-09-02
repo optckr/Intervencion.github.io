@@ -13,8 +13,6 @@ window.units = [
     [ "Sumeragi", "13005", ["Sword", "Water"], 3, null, null, null, 100, null, null, null, null, 8407, 168, 2056, null ],
     [ "Heathcliff [Guild Commander]", "13006", ["Sword", "Holy"], 3, null, null, null, 100, null, null, null, null, 9066, 159, 2081, null ],
     [ "Red-Eyed XaXa", "13007", ["Sword", "Neutral"], 3, null, null, null, 100, null, null, null, null, 8979, 159, 2070, null ],
-    [ "Name", "ID", ["WEAPON", "ELEMENT"], rarity, null, null, null, 100, null, null, null, null, HP, MP, ATK, null ],
-    [ "Name", "ID", ["WEAPON", "ELEMENT"], rarity, null, null, null, 100, null, null, null, null, HP, MP, ATK, null ],
     [ "Monkey D. Luffy Gear 2", "STR", [ "Fighter", "Free Spirit" ], 5, 15, 8, 3, 99, 3000000, 902, 473, 74, 1772, 1313, 227, 1 ],
     ];
     
