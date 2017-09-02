@@ -51,7 +51,7 @@ controllers.MainCtrl = function($scope, $rootScope, $state, $stateParams, $contr
             var unit = team[i];
             if (!unit || !unit.uid) tokens.push('!');
             else {
-                var temp = unit.slots
+                var temp = unit.MP
                     .filter(function(x) { return x; })
                     .map(function(x) { return x.id + '' + x.level; })
                     .join('');
@@ -157,8 +157,8 @@ controllers.SummaryCtrl = function($scope, $rootScope, $state, $stateParams) {
 
         var points = [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ];
         team.forEach(function(unit) {
-            if (!unit || !unit.slots) return;
-            unit.slots.forEach(function(slot) {
+            if (!unit || !unit.MP) return;
+            unit.MP.forEach(function(slot) {
                 if (!slot) return;
                 points[slot.id] += slot.level;
             });

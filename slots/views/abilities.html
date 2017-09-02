@@ -13,10 +13,10 @@
                     <table>
 
                         <tr>
-                            <td rowspan="{{data.team[slot].unit.slots || 1}}">
+                            <td rowspan="{{data.team[slot].unit.MP || 1}}">
                                 <div class="slot big nohover" decorate-slot uid="data.team[slot].unit.number + 1"></div>
                             </td>
-                            <td ng-if="data.team[slot].unit.slots > 0"><ability-slot></ability-slot></td>
+                            <td ng-if="data.team[slot].unit.MP > 0"><ability-slot></ability-slot></td>
                             <td>{{getName(data.team[slot].abilities[0].id)}}</td>
                             <td>
                                 <input type="number" min="1" max="5" ng-show="data.team[slot].abilities[0]"
@@ -24,7 +24,7 @@
                             </td>
                         </tr>
 
-                        <tr ng-if="data.team[slot].unit.slots > 1">
+                        <tr ng-if="data.team[slot].unit.MP > 1">
                             <td><ability-slot></ability-slot></td>
                             <td>{{getName(data.team[slot].abilities[1].id)}}</td>
                             <td>
@@ -33,7 +33,7 @@
                             </td>
                         </tr>
 
-                        <tr ng-if="data.team[slot].unit.slots > 2">
+                        <tr ng-if="data.team[slot].unit.MP > 2">
                             <td><ability-slot></ability-slot></td>
                             <td>{{getName(data.team[slot].abilities[2].id)}}</td>
                             <td>
@@ -42,7 +42,7 @@
                             </td>
                         </tr>
 
-                        <tr ng-if="data.team[slot].unit.slots > 3">
+                        <tr ng-if="data.team[slot].unit.MP > 3">
                             <td><ability-slot></ability-slot></td>
                             <td>{{getName(data.team[slot].abilities[3].id)}}</td>
                             <td>
@@ -51,7 +51,7 @@
                             </td>
                         </tr>
 
-                        <tr ng-if="data.team[slot].unit.slots > 4">
+                        <tr ng-if="data.team[slot].unit.MP > 4">
                             <td><ability-slot></ability-slot></td>
                             <td>{{getName(data.team[slot].abilities[4].id)}}</td>
                             <td>
