@@ -3,7 +3,7 @@
 var directives = { };
 var filters = { };
 
-var app = angular.module('saomd');
+var app = angular.module('optc');
 
 /**************
  * Directives *
@@ -117,7 +117,7 @@ directives.addCaptainOptions = function($timeout, $compile, MATCHER_IDS) {
         link: function(scope, element, attrs) {
             if (scope.n !== TARGET) return;
             var filter = $('<div id="class-filters" ng-class="{ enabled: filters.custom[' + TARGET + '] }"></div>');
-            var weapons = [ 'Sword', 'Dual Blades', 'Rapier', 'Dagger', 'Mace', 'Gun', 'Bow', 'Rod', 'Lance', 'Sword & Shield' ];
+            var classes = [ 'Fighter', 'Shooter', 'Slasher', 'Striker', 'Free Spirit', 'Cerebral', 'Powerhouse', 'Driven' ];
             classes.forEach(function(x,n) {
                 var template = '<span class="filter subclass %c" ng-class="{ active: filters.classCaptain == \'%s\' }" ' +
                     'ng-click="onCaptainClick($event,\'%s\')">%s</span>';
@@ -141,7 +141,7 @@ directives.addSailorOptions = function($timeout, $compile, MATCHER_IDS) {
         link: function(scope, element, attrs) {
             if (scope.n !== TARGET) return;
             var filter = $('<div id="class-filters" ng-class="{ enabled: filters.custom[' + TARGET + '] }"></div>');
-            var classes = [ 'Sword', 'Dual Blades', 'Rapier', 'Dagger', 'Mace', 'Gun', 'Bow', 'Rod', 'Lance', 'Sword & Shield' ];
+            var classes = [ 'Fighter', 'Shooter', 'Slasher', 'Striker', 'Free Spirit', 'Cerebral', 'Powerhouse', 'Driven' ];
             classes.forEach(function(x,n) {
                 var template = '<span class="filter subclass %c" ng-class="{ active: filters.classSailor == \'%s\' }" ' +
                     'ng-click="onSailorClick($event,\'%s\')">%s</span>';
@@ -163,7 +163,7 @@ directives.addSpecialOptions = function($timeout, $compile, MATCHER_IDS) {
         link: function(scope, element, attrs) {
             if (scope.n !== TARGET) return;
             var filter = $('<div id="class-filters" ng-class="{ enabled: filters.custom[' + TARGET + '] }"></div>');
-            var classes = [ 'Sword', 'Dual Blades', 'Rapier', 'Dagger', 'Mace', 'Gun', 'Bow', 'Rod', 'Lance', 'Sword & Shield' ];
+            var classes = [ 'Fighter', 'Shooter', 'Slasher', 'Striker', 'Free Spirit', 'Cerebral', 'Powerhouse', 'Driven' ];
             classes.forEach(function(x,n) {
                 var template = '<span class="filter subclass %c" ng-class="{ active: filters.classSpecial == \'%s\' }" ' +
                     'ng-click="onSpecialClick($event,\'%s\')">%s</span>';
@@ -188,7 +188,7 @@ directives.addOrbOptions = function($timeout, $compile, MATCHER_IDS) {
             var filter = $('<div id="controllers" ng-class="{ enabled: filters.custom[' + TARGET + '] }">' +
                     '<span class="separator">&darr;</span></div>');
             var separator = filter.find('.separator');
-            [ 'Fire', 'Wind', 'Water', 'Earth', 'Dark', 'Holy', 'Neutral' ].forEach(function(type) {
+            [ 'STR', 'DEX', 'QCK', 'PSY', 'INT', 'RCV', 'TND', 'BLOCK', 'EMPTY', 'BOMB', 'G' ].forEach(function(type) {
                 var template = '<span class="filter orb %s" ng-class="{ active: filters.%f.indexOf(\'%s\') > -1 }" ' +
                     'ng-model="filters.%f" ng-click="onOrbClick($event,\'%s\')">%S</span>';
                 separator.before($(template.replace(/%s/g,type).replace(/%S/g,type[0]).replace(/%f/g,'ctrlFrom')));

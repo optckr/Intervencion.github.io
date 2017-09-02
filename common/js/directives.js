@@ -33,7 +33,7 @@ var notes = {
  * Angular *
  ***********/
 
-var app = angular.module('saomd');
+var app = angular.module('optc');
 var directives = { }, filters = { };
 
 /************************

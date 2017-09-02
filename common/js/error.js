@@ -1,6 +1,6 @@
 (function() {
 
-var app = angular.module('saomd');
+var app = angular.module('optc');
 
 app.factory('$exceptionHandler', function($injector) {
     return function(exception, cause) {

@@ -1,14 +1,14 @@
 (function() {
 
-var app = angular.module('saomd');
+var app = angular.module('optc');
 
 app.controller('DismissalCtrl', function(ngDialog, $templateCache) {
 
 
     var dismissalPopupShown = true;
 
-    try { dismissalPopupShown = JSON.parse(localStorage.getItem('dismissalShown')) || false; }
-    catch (e) { }
+//    try { dismissalPopupShown = JSON.parse(localStorage.getItem('dismissalShown')) || false; }
+//    catch (e) { }
 
     if (dismissalPopupShown) return;
 

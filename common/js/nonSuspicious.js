@@ -50,7 +50,7 @@ window.onload = function() {
     for (var i = 0, len = newUnits.length; i < len; i++) {
         var unit = document.createElement("a");
         unit.href = "/characters/#/view/"+newUnits[i];
-        unit.weaponName = "slot small";
+        unit.className = "slot small";
         unit.target = "_blank";
         unit.title = window.units[newUnits[i]-1][0];
         unit.style = "background-image: url("+Utils.getThumbnailUrl(newUnits[i])+");";

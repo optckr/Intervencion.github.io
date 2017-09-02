@@ -1,13 +1,8 @@
 window.units = [
-//    [ "Monkey D. Luffy", "STR", "Fighter", 2, 1, 5, 0, 5, 163, 42, 15, 8, 134, 68, 15, 1 ],
-    [ "11001", "Kirito", "Sword", "Neutral", 1, null, 5331, 118, 1129, 1049, 1033],
-	[ "12001", "Kirito [Former Beta Tester]", "Sword", "Neutral", 2, null, 6390, 132, 1548, 1435, 1236],
-	[ "12002", "Klein", "Sword", "Neutral", 2, null, 6262, 132, 1578, 1464, 1211],
-	[ "12003", "Diavel", "Sword", "Neutral", 2, null, 6485, 125, 1509, 1413, 1261],
-	[ "12004", "Corvatz", "Sword", "Neutral", 2, null, 6613, 125, 1494, 1377, 1249],
+    [ "Kirito", "11001", ["Sword", "Neutral"], 1, null, null, null, 100, null, null, null, null, 5331, 118, 1129, 1 ],
+    [ "Ben Beckman, 'Four Emperors' Red Hair's Right Hand Man", "INT", [ "Cerebral", "Striker" ], 5, 30, 4, 4, 99, 4000000, null, null, null, 2295, 1384, 367, null ],
     ];
     
 // [ "Name", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
 // or [ "Name", "Type", "Class1", null, null, null, null, null, null, null, null, null, null, null, null, null ],
-// [ "ID", "Name", "Weapon", "Element", Rarity, Cost, HP, MP, ATK, Critical, Defense],
 // [ "Name", "Type", [ "Class1", "Class2" ], Stars, Cost, Combo, sockets, maxLVL, EXPToMax, lvl1HP, lvl1ATK, lvl1RCV, MAXHP, MAXATK, MAXRCV, Growth Rate ],

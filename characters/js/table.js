@@ -1,6 +1,6 @@
 (function() {
 
-angular.module('saomd') .run(function($rootScope, $timeout, $storage, MATCHER_IDS) {
+angular.module('optc') .run(function($rootScope, $timeout, $storage, MATCHER_IDS) {
 
     /**************
      * Table data *
@@ -41,15 +41,15 @@ angular.module('saomd') .run(function($rootScope, $timeout, $storage, MATCHER_ID
         var result = [
             { title: 'ID' },
             { title: 'Name', render: addImage },
-            { title: 'Weapon' },
-            { title: 'Element' },
+            { title: 'Type' },
+            { title: 'Class' },
             { title: 'HP' },
-            { title: 'MP' },
             { title: 'ATK' },
-            { title: 'Critical' },
-            { title: 'Defense' },
-            { title: 'Rarity' },
+            { title: 'RCV' },
             { title: 'Cost' },
+            { title: 'Slots' },
+            { title: 'Stars' },
+            { title: 'CL', orderable: false }
         ];
         additionalColumns.forEach(function(x) {
             var title = x
@@ -104,19 +104,19 @@ angular.module('saomd') .run(function($rootScope, $timeout, $storage, MATCHER_ID
         if (!tableData.parameters.filters) return true;
         var filters = tableData.parameters.filters;
         // filter by type
-        if (filters.type && unit.element !== filters.type) return false;
+        if (filters.type && unit.type !== filters.type) return false;
         // filter by class
         if (filters.classes && filters.classes.length) {
-            var singleQuery = filters.classes.length == 1, singleClass = unit.weapon.length > 2;
+            var singleQuery = filters.classes.length == 1, singleClass = unit.class.length > 2;
             if (!singleQuery && singleClass) return false;
-            else if (singleQuery && singleClass && filters.classes[0] != unit.weapon) return false;
-            else if (singleQuery && !singleClass && filters.classes.indexOf(unit.weapon[0]) == -1 &&
-                    filters.classes.indexOf(unit.weapon[1]) == -1) return false;
-            else if (!singleQuery && !singleClass && (filters.classes.indexOf(unit.weapon[0]) == -1 ||
-                        filters.classes.indexOf(unit.weapon[1]) == -1)) return false;
+            else if (singleQuery && singleClass && filters.classes[0] != unit.class) return false;
+            else if (singleQuery && !singleClass && filters.classes.indexOf(unit.class[0]) == -1 &&
+                    filters.classes.indexOf(unit.class[1]) == -1) return false;
+            else if (!singleQuery && !singleClass && (filters.classes.indexOf(unit.class[0]) == -1 ||
+                        filters.classes.indexOf(unit.class[1]) == -1)) return false;
         }
         // filter by stars
-        if (filters.stars && filters.stars.length && filters.stars.indexOf(unit.rarity) == -1) return false;
+        if (filters.stars && filters.stars.length && filters.stars.indexOf(unit.stars) == -1) return false;
         // filter by cost
         if (filters.costEnabled && (unit.cost < filters.cost[0] || unit.cost > filters.cost[1])) return false;
         // filter by drop

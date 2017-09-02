@@ -2,10 +2,20 @@
 
 (function() {
 
-var app = angular.module('saomd', [ 'ui.router', 'ui.bootstrap', 'ngSanitize', 'chart.js', 'ngDialog' ]);
+var app = angular.module('optc', [ 'ui.router', 'ui.bootstrap', 'ngSanitize', 'chart.js', 'ngDialog' ]);
 
 Utils.parseUnits(false);
 
+/***********************
+ * Reverse matcher map *
+ ***********************/
+
+var reverseMatcherMap = { };
+for (var i=0;i<window.matchers.length;++i) {
+    var data = window.matchers[i], type = (data.target == 'captain' ? 'captain' : data.target == 'special' ? 'special' : 'sailor');
+    var name = data.name.replace(/-/g,' ').replace(/\s(.)/g,function(x,y) { return y.toUpperCase(); });
+    reverseMatcherMap[type + '.' + name] = i;
+}
 
 /********************
  * GA Configuration *
@@ -16,7 +26,7 @@ app
         $rootScope.$on('$stateChangeSuccess',function(e) {
             $rootScope.currentState = $state.current.name;
             if (ga) ga('send', 'pageview', '/characters');
-            var title = 'Sword Art Online Memory Defrag Character Profiles';
+            var title = 'One Piece Treasure Cruise Character Table';
             if ($state.current.name == 'main.search.view') {
                 var unit = window.units[parseInt($stateParams.id,10) - 1];
                 title = (unit.name || '?') + ' | ' + title;
@@ -25,7 +35,7 @@ app
             window.document.title = title;
         });
     })
-	.constant('MATCHER_IDS', reverseMatcherMap);
+    .constant('MATCHER_IDS', reverseMatcherMap);
 
 /**************
  * Versioning *
