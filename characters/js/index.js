@@ -6,16 +6,6 @@ var app = angular.module('saomd', [ 'ui.router', 'ui.bootstrap', 'ngSanitize', '
 
 Utils.parseUnits(false);
 
-/***********************
- * Reverse matcher map *
- ***********************/
-
-var reverseMatcherMap = { };
-for (var i=0;i<window.matchers.length;++i) {
-    var data = window.matchers[i], type = (data.target == 'captain' ? 'captain' : data.target == 'special' ? 'special' : 'sailor');
-    var name = data.name.replace(/-/g,' ').replace(/\s(.)/g,function(x,y) { return y.toUpperCase(); });
-    reverseMatcherMap[type + '.' + name] = i;
-}
 
 /********************
  * GA Configuration *
