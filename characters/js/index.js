@@ -24,7 +24,8 @@ app
             }
             window.document.title = title;
         });
-    });
+    })
+	.constant('MATCHER_IDS', reverseMatcherMap);
 
 /**************
  * Versioning *
