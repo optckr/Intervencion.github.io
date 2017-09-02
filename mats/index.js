@@ -113,7 +113,7 @@ app.controller('MainCtrl',function($scope, $rootScope, $timeout, $storage, $sce,
         if (value) {
             var temp = $rootScope.mats.map(function(x,n) {
                 var unit = window.units[x.id - 1];
-                return { type: getTypeId(unit.type || 'INT'), stars: unit.rarity, cost: unit.cost, data: x };
+                return { type: getTypeId(unit.element || 'INT'), stars: unit.rarity, cost: unit.cost, data: x };
             });
             temp.sort(firstBy('type').thenBy('stars', -1).thenBy(function(x,y) { return (x.cost - y.cost) * (x.stars < 3 ? -1 : 1); }));
             temp = temp.map(function(x) { return x.data; });

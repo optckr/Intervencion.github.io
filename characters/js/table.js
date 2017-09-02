@@ -104,16 +104,16 @@ angular.module('saomd') .run(function($rootScope, $timeout, $storage, MATCHER_ID
         if (!tableData.parameters.filters) return true;
         var filters = tableData.parameters.filters;
         // filter by type
-        if (filters.type && unit.type !== filters.type) return false;
+        if (filters.type && unit.element !== filters.type) return false;
         // filter by class
         if (filters.classes && filters.classes.length) {
-            var singleQuery = filters.classes.length == 1, singleClass = unit.class.length > 2;
+            var singleQuery = filters.classes.length == 1, singleClass = unit.weapon.length > 2;
             if (!singleQuery && singleClass) return false;
-            else if (singleQuery && singleClass && filters.classes[0] != unit.class) return false;
-            else if (singleQuery && !singleClass && filters.classes.indexOf(unit.class[0]) == -1 &&
-                    filters.classes.indexOf(unit.class[1]) == -1) return false;
-            else if (!singleQuery && !singleClass && (filters.classes.indexOf(unit.class[0]) == -1 ||
-                        filters.classes.indexOf(unit.class[1]) == -1)) return false;
+            else if (singleQuery && singleClass && filters.classes[0] != unit.weapon) return false;
+            else if (singleQuery && !singleClass && filters.classes.indexOf(unit.weapon[0]) == -1 &&
+                    filters.classes.indexOf(unit.weapon[1]) == -1) return false;
+            else if (!singleQuery && !singleClass && (filters.classes.indexOf(unit.weapon[0]) == -1 ||
+                        filters.classes.indexOf(unit.weapon[1]) == -1)) return false;
         }
         // filter by stars
         if (filters.stars && filters.stars.length && filters.stars.indexOf(unit.rarity) == -1) return false;

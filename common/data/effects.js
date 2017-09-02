@@ -3,7 +3,7 @@ window.effects = {
     // always use unique IDs, and don't ever change an ID once you've set it
     // IDs must always be greater than 0
     // last ID used: 42
-    // Use p.type instead of p.unit.type here
+    // Use p.type instead of p.unit.element here
 
     'Baroque Works (pre-v4.0)': {
         description: 'Stats of non-Fighter units reduced by 90%',

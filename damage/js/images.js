@@ -82,12 +82,12 @@ app.controller('ImageGeneratorCtrl', function($scope, $filter, $timeout) {
                 var orb = $scope.tdata.team[n].orb;
                 if (orb != 1.0) {
                     var gradient = context.createRadialGradient(baseX + 20, baseY + 21, 13, baseX + 22, baseY + 22, 35);
-                    if (orb < 1) gradient.addColorStop(0.1, ORB_COLORS[Utils.getOppositeType(unit.type)]);
-                    else gradient.addColorStop(0.1, ORB_COLORS[orb == 'g' ? 'G' : orb == 'str' ? 'STR' : orb == 'rainbow' ? 'RAINBOW' : orb == 'meat' ? 'MEAT' : unit.type]);
+                    if (orb < 1) gradient.addColorStop(0.1, ORB_COLORS[Utils.getOppositeType(unit.element)]);
+                    else gradient.addColorStop(0.1, ORB_COLORS[orb == 'g' ? 'G' : orb == 'str' ? 'STR' : orb == 'rainbow' ? 'RAINBOW' : orb == 'meat' ? 'MEAT' : unit.element]);
                     if (orb < 1) gradient.addColorStop(0.2, 'black');
                     else {
                         gradient.addColorStop(0.2, 'white');
-                        gradient.addColorStop(0.3, ORB_COLORS[unit.type]);
+                        gradient.addColorStop(0.3, ORB_COLORS[unit.element]);
                     }
                     gradient.addColorStop(0.7, 'transparent');
                     gradient.addColorStop(1.0, 'transparent');

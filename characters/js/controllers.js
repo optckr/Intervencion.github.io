@@ -111,7 +111,7 @@ app.controller('DetailsCtrl',function($scope, $rootScope, $state, $stateParams, 
     var id = parseInt($stateParams.id, 10);
     $scope.id = id;
     $scope.unit = jQuery.extend({},window.units[id - 1]);
-    $scope.hybrid = $scope.unit.class && $scope.unit.class.constructor == Array;
+    $scope.hybrid = $scope.unit.weapon && $scope.unit.weapon.constructor == Array;
     $scope.details = window.details[id];
     $scope.cooldown = window.cooldowns[id - 1];
     $scope.evolution = window.evolutions[id];

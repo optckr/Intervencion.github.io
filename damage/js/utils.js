@@ -9,7 +9,7 @@ window.CrunchUtils = { };
 window.CrunchUtils.okamaCheck = function(array, modifiers, data) {
     for (var i=0;i<array.length;++i) {
         for (var j=0;j<data.length && i+j<array.length;++j) {
-            var different = (data[j].type && array[i+j].unit.unit.type != data[j].type) ||
+            var different = (data[j].type && array[i+j].unit.unit.element != data[j].type) ||
                 (data[j].minModifier && MODIFIERS.indexOf(modifiers[i+j]) < MODIFIERS.indexOf(data[j].minModifier));
             if (different) break;
         }
@@ -22,7 +22,7 @@ window.CrunchUtils.okamaSort = function(array, data) {
     var that = jQuery.extend([], array), temp = [ ];
     for (var i=0;i<data.length;++i) {
         for (var j=0;j<that.length;++j) {
-            if (that[j].unit.unit.type != data[i]) continue;
+            if (that[j].unit.unit.element != data[i]) continue;
             temp.push(that.splice(j,1)[0]);
             break;
         }
@@ -39,7 +39,7 @@ window.CrunchUtils.classSort = function(array, classMultiplier, classes) {
     var result = [ ];
     function isUnitAMatch(unit) {
         for (var n = 0;n<classes.length;n++) {
-            if (unit.class.has(classes[n])) {
+            if (unit.weapon.has(classes[n])) {
                 return true;
             }
         }
@@ -98,7 +98,7 @@ window.CrunchUtils.lowCostSort = function(array, costMultiplier, cost) {
 window.CrunchUtils.typeSort = function(array, typeMultiplier, types) {
     var result = [ ];
     function isUnitAMatch(unit) {
-        if (unit.type == types) {
+        if (unit.element == types) {
             return true;
         }
         else {

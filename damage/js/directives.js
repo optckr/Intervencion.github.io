@@ -623,12 +623,12 @@ directives.unitOrb = function($rootScope) {
             scope.glow = function() {
                 var unit = scope.tdata.team[scope.slot];
                 if (unit.orb == 1) return 'none';
-                if (unit.orb == 2) return scope.data.team[scope.slot].unit.type;
+                if (unit.orb == 2) return scope.data.team[scope.slot].unit.element;
                 if (unit.orb == 'g') return 'G';
                 if (unit.orb == 'str') return 'S';
                 if (unit.orb == 'rainbow') return 'R';
                 if (unit.orb == 'meat') return 'M';
-                return Utils.getOppositeType(scope.data.team[scope.slot].unit.type) + ' opposite';
+                return Utils.getOppositeType(scope.data.team[scope.slot].unit.element) + ' opposite';
             };
             var onShortPress = function(e) {
                 var unit = scope.data.team[scope.slot], tunit = scope.tdata.team[scope.slot];
@@ -648,11 +648,11 @@ directives.unitOrb = function($rootScope) {
                         ORBS.push('str');
                     }
                     var ORBSlength = ORBS.length;
-                    if($rootScope.areSTROrbsEnabled() && (unit.unit.type == "STR" || unit.unit.type == "DEX")){
+                    if($rootScope.areSTROrbsEnabled() && (unit.unit.element == "STR" || unit.unit.element == "DEX")){
                         ORBSlength--;
                     }
                     var n = ORBS.indexOf(tunit.orb);
-                    /*if(unit.unit.type == "STR" || unit.unit.type == "DEX")
+                    /*if(unit.unit.element == "STR" || unit.unit.element == "DEX")
                         tunit.orb = ORBS[(n + 1) % ($rootScope.areGOrbsEnabled() ? ORBS.length - 1 : ORBS.length - 2)];
                     else
                         tunit.orb = ORBS[(n + ((!$rootScope.areGOrbsEnabled() && $rootScope.areSTROrbsEnabled() && n == ORBS.length - 3) ? 2 : 1)) % ($rootScope.areGOrbsEnabled() ? ($rootScope.areSTROrbsEnabled() ? ORBS.length : ORBS.length - 1) : ($rootScope.areSTROrbsEnabled() ? ORBS.length : ORBS.length - 2))];*/
@@ -681,11 +681,11 @@ directives.unitOrb = function($rootScope) {
                 }
                 var unit = scope.data.team[scope.slot], tunit = scope.tdata.team[scope.slot];
                 var ORBSlength = ORBS.length;
-                    if($rootScope.areSTROrbsEnabled() && (unit.unit.type == "STR" || unit.unit.type == "DEX")){
+                    if($rootScope.areSTROrbsEnabled() && (unit.unit.element == "STR" || unit.unit.element == "DEX")){
                         ORBSlength--;
                     }
                     var n = ORBS.indexOf(tunit.orb);
-                /*if(unit.unit.type == "STR" || unit.unit.type == "DEX")
+                /*if(unit.unit.element == "STR" || unit.unit.element == "DEX")
                 tunit.orb = ORBS[(n + 1) % ($rootScope.areGOrbsEnabled() ? ORBS.length - 1 : ORBS.length - 2)];
                 else
                 tunit.orb = ORBS[(n + ((!$rootScope.areGOrbsEnabled() && $rootScope.areSTROrbsEnabled() && n == ORBS.length - 3) ? 2 : 1)) % ($rootScope.areGOrbsEnabled() ? ($rootScope.areSTROrbsEnabled() ? ORBS.length : ORBS.length - 1) : ($rootScope.areSTROrbsEnabled() ? ORBS.length : ORBS.length - 2))];*/
@@ -821,8 +821,8 @@ directives.special = function($rootScope) {
             scope.$watch('tdata.team[slot].special',function(enabled) {
                 removeType();
                 var unit = scope.data.team[scope.slot].unit;
-                if (enabled) element.addClass(unit.type);
-                type = (unit ? unit.type : null);
+                if (enabled) element.addClass(unit.element);
+                type = (unit ? unit.element : null);
                 isSelected = enabled;
                 if (enabled && window.specials[unit.number+1].warning) {
                     scope.notify({
@@ -833,7 +833,7 @@ directives.special = function($rootScope) {
             });
             scope.$watch('data.team[slot].unit',function(unit) {
                 removeType();
-                if (scope.tdata.team[scope.slot].special) element.addClass(unit.type);
+                if (scope.tdata.team[scope.slot].special) element.addClass(unit.element);
                 scope.hasSpecial = unit && window.specials.hasOwnProperty(unit.number+1);
             });
             element.click(function(e) {

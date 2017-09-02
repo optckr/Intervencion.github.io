@@ -45,10 +45,10 @@
                                     <th>Cost</th>
                                 </tr>
                                 <tr>
-                                    <td ng-if="!hybrid">{{unit.class}}</td>
-                                    <td ng-if="hybrid">{{unit.class[0]}}</td>
-                                    <td ng-if="hybrid">{{unit.class[1]}}</td>
-                                    <td>{{unit.type}}</td>
+                                    <td ng-if="!hybrid">{{unit.weapon}}</td>
+                                    <td ng-if="hybrid">{{unit.weapon[0]}}</td>
+                                    <td ng-if="hybrid">{{unit.weapon[1]}}</td>
+                                    <td>{{unit.element}}</td>
                                     <td ng-if="!compare">{{unit.rarity}}</td>
                                     <td ng-if="compare" comparison="positive">{{unit.rarity - compare.rarity}}</td>
                                     <td ng-if="!compare">{{unit.cost}}</td>

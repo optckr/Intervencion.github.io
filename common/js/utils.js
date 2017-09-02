@@ -209,7 +209,7 @@
     };
 
     utils.isEvolverBooster = function (unit) {
-        return /Evolver|Booster/i.test(unit.class);
+        return /Evolver|Booster/i.test(unit.weapon);
     };
 
     utils.searchBaseForms = function (id) {
