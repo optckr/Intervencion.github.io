@@ -3649,11 +3649,11 @@ window.specials = {
         def: function(p) { return 0.1; }
     },
     1805: {
-		def: function(p) { return .2; },
+		def: function(p) { return .0; },
         orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.5, [p.friendCaptain, p.captain]); }
     },
     1806: {
-		def: function(p) { return .2; },
+		def: function(p) { return .0; },
         orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.5, [p.friendCaptain, p.captain]); }
     },
     1811: {
