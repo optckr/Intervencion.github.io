@@ -1821,9 +1821,9 @@ window.units = [
     [ "Tank", "DEX", [ "Powerhouse", "Striker" ], 3, 15, null, null, null, null, null, null, null, null, null, null, null ],
     [ "Ray Shop Sanji", "STR", [ "Fighter", "Powerhouse" ], 4, 13, 7, 3, 50, 392109, 184, 106, 50, 830, 475, 301, null ],
     [ "Ray Shop Sanji, Evolved", "STR", [ "Fighter", "Powerhouse" ], 5, 20, 4, 4, 99, 4000000, 815, 450, 297, 1602, 1231, 550, null ],
-	null
-	null
-	null
+    [ "1", "STR", [ "Fighter", "Powerhouse" ], 5, 20, 4, 4, 99, 4000000, 815, 450, 297, 1602, 1231, 550, null ],
+    [ "2", "STR", [ "Fighter", "Powerhouse" ], 5, 20, 4, 4, 99, 4000000, 815, 450, 297, 1602, 1231, 550, null ],
+    [ "3", "STR", [ "Fighter", "Powerhouse" ], 5, 20, 4, 4, 99, 4000000, 815, 450, 297, 1602, 1231, 550, null ],
     [ "A-KAI-nu", "STR", [ "Fighter", "Driven" ], 5, 20, 4, 4, 99, 4000000, 815, 450, 297, 2462, 1408, 319, 1 ],
     ];
     
