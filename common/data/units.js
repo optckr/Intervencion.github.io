@@ -1824,7 +1824,7 @@ window.units = [
     [ "1", "STR", [ "Fighter", "Powerhouse" ], 5, 20, 4, 4, 99, 4000000, 815, 450, 297, 1602, 1231, 550, null ],
     [ "2", "STR", [ "Fighter", "Powerhouse" ], 5, 20, 4, 4, 99, 4000000, 815, 450, 297, 1602, 1231, 550, null ],
     [ "3", "STR", [ "Fighter", "Powerhouse" ], 5, 20, 4, 4, 99, 4000000, 815, 450, 297, 1602, 1231, 550, null ],
-    [ "A-KAI-nu", "STR", [ "Fighter", "Driven" ], 5, 20, 4, 4, 99, 4000000, 815, 450, 297, 2462, 1408, 319, 1 ],
+    [ "A-KAI-nu", "INT", [ "Fighter", "Driven" ], 5, 20, 4, 4, 99, 4000000, 815, 450, 297, 2462, 1408, 319, 1 ],
     ];
     
 // [ "Name", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
