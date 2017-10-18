@@ -3707,4 +3707,12 @@ window.specials = {
     1826: {
         affinity: function(p){ return p.unit.type == "INT" ? 1.75 : 1; }
     },
+    1826: {
+        atk: function(p) { return p.unit.type == "INT" ? 2 : 1; },
+        type: "type"
+    },
+    1827: {
+        atk: function(p) { return p.unit.type == "INT" ? 2 : 1; },
+        type: "type"
+    },
 };
