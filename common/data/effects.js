@@ -409,9 +409,11 @@ window.effects = {
         id: 43, // don't change this
         atk: function(p) {
             var id = p.number + 1,
-                matching = ((id > 1803 && id < 1806) ||
+                buggyzoro = ((id > 1803 && id < 1806) ||
                     [ 1804, 1806 ].indexOf(id) != -1);
-            return !matching ? 2.5 : 1;
+                lucy = ((id > 1793 && id < 1794) ||
+                    [ 1793, 1794 ].indexOf(id) != -1);
+            return !buggyzoro ? 2.5 : 1, !lucy ? 1.2 : 1;
         },
 	},
 };
