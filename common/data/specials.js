@@ -3704,14 +3704,17 @@ window.specials = {
         atk: function(p) { return p.slot > 1 ? 1.2 : 1; },
         type: "class"
     },
-    1826: {
+    1825: {
         affinity: function(p){ return p.unit.type == "INT" ? 1.75 : 1; }
     },
     1826: {
+        affinity: function(p){ return p.unit.type == "INT" ? 1.75 : 1; }
+    },
+    1827: {
         atk: function(p) { return p.unit.type == "INT" ? 2 : 1; },
         type: "type"
     },
-    1827: {
+    1828: {
         atk: function(p) { return p.unit.type == "INT" ? 2 : 1; },
         type: "type"
     },
