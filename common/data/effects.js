@@ -436,5 +436,5 @@ window.effects = {
 //                            //console.log(boost1+" "+boost2+" "+boost3+" "+boost4+" "+boost5)
 //                            return 1*buggy*zoro*lucy; 
 //                        },
-    },
+//    },
 };
