@@ -3667,7 +3667,7 @@ window.specials = {
         },
         onDeactivation: function(p) {
             window.specials[1807].turnedOn[p.slot] = false;
-        }
+        },
         chain: function(p) { return p.captain.class.has("Slasher") ? 2.75 : 1; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
@@ -3686,7 +3686,7 @@ window.specials = {
         },
         onDeactivation: function(p) {
             window.specials[1808].turnedOn[p.slot] = false;
-        }
+        },
         chain: function(p) { return p.captain.class.has("Slasher") ? 2.75 : 1; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
