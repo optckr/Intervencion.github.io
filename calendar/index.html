@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Mirrored from lukforce.bitbucket.io/optc-cal/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 17 Oct 2017 23:43:19 GMT -->
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" id="vp" content="">
+    <meta name="author" content="zl1814, qblcookie">
+    <meta name="keywords" content="OPTC, One Piece Treasure Cruise, Calendar, Guides, Events">
+    <meta name="description" content="One Piece Treasure Cruise event calendar for global server. View past, current, and future events in month view. Links to guides in individual events.">
+
+    <title>Global OPTC Calendar</title>
+
+    <link rel="icon" sizes="192x192" href="assets/img/pappagu.png" />
+
+    <link href="vendor/fullcalendar/fullcalendar.min.css" rel="stylesheet" />
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+
+    <link href="assets/css/main.css" rel="stylesheet" />
+
+    <script src="vendor/js/jquery.min.js"></script>
+    <script src="vendor/js/moment.min.js"></script>
+    <script src="vendor/js/hammer.min.js"></script>
+    <script src="vendor/fullcalendar/fullcalendar.min.js"></script>
+    <script src="vendor/bootstrap/js/tether.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <script src="assets/js/calRender.js"></script>
+
+    <script src="app/data/fortnights.js"></script>
+    <script src="app/data/raids.js"></script>
+    <script src="app/data/coliseums.js"></script>
+    <script src="app/data/ambushes.js"></script>
+    <script src="app/data/specials.js"></script>
+    <script src="app/data/specials_bg.js"></script>
+
+    <script src="app/guides/drops.js"></script>
+    <script src="app/guides/gw.js"></script>
+    <script src="app/guides/sevenDays.js"></script>
+    <script src="app/guides/wiki.js"></script>
+    <script src="app/guides/videoWiki.js"></script>
+
+    <script src="app/calEvents/fortnightEvents.js"></script>
+    <script src="app/calEvents/raidEvents.js"></script>
+    <script src="app/calEvents/coliseumEvents.js"></script>
+    <script src="app/calEvents/specialEvents.js"></script>
+    <script src="app/calEvents/specialBgEvents.js"></script>
+
+    <!-- Google Analytics -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','../../www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-102555316-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+</head>
+
+<body>
+    <div id="eventDetailModal" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">
+                        <i class="fa fa-external-link"></i>&nbsp;Helpful Resources
+                    </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+                    <div id="eventDetail" class="container-fluid"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="eventDetailClone" class="row justify-content-center" style="display: none;">
+        <div class="col-3">
+            <div class="eventThumb"></div>
+        </div>
+        <div class="col-9">
+            <h6 class="eventTitle"></h6>
+            <ul class="fa-ul">
+                <li class="dropList" style="display: none;">
+                    <i class="fa-li fa fa-chevron-circle-down"></i>
+                    <span class="url"></span>
+                </li>
+                <li class="gamewith" style="display: none;">
+                    <i class="fa-li fa fa-globe"></i>
+                    <span class="url"></span>
+                </li>
+                <li class="sevenDays" style="display: none;">
+                    <i class="fa-li fa fa-youtube-play"></i>
+                    <span class="url"></span>
+                </li>
+                <li class="redditWiki" style="display: none;">
+                    <i class="fa-li fa fa-reddit"></i>
+                    <span class="url"></span>
+                </li>
+                <li class="redditVideoWiki" style="display: none;">
+                    <i class="fa-li fa fa-reddit"></i>
+                    <span class="url"></span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="modalCloseButton" class="row justify-content-center" style="display: none;">
+        <div class="col-2">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                <i class="fa fa-close"></i>&nbsp;Close
+            </button>
+        </div>
+    </div>
+
+    <div id="optc-agenda">
+        <i class="fa fa-external-link"></i>&nbsp;
+        <a href="https://optc-agenda.github.io/" target="_blank">Week View Mode (to OPTC Agenda)</a>
+    </div>
+
+    <div id="info">
+        <i class="fa fa-info fa-lg"></i>&nbsp;
+        Click on Events for links to drops and guides
+    </div>
+
+    <div id="mobile-info" style="display: none;">
+        <i class="fa fa-info fa-lg"></i>&nbsp;
+        Swipe left/right to navigate calendar
+    </div>
+
+    <div id="calendar"></div>
+
+    <br />
+
+    <div id="footer">
+        Calendar by <a href="https://www.reddit.com/u/zl1814" target="_blank">u/zl1814</a>, background images provided by <a href="https://www.reddit.com/u/qblcookie" target="_blank">u/qblcookie</a>
+        <br />
+        Please report bugs and errors to <a href="https://www.reddit.com/u/zl1814" target="_blank">u/zl1814</a> through Reddit
+        <br />
+        欢迎中文玩家加入OPTC美服QQ群: 450369501
+    </div>
+
+    <div id="disclaimer">
+        This site does not own any of the images. All images are owned by Eiichiro Oda/Shueisha, Toei Animation, and Bandai Namco.
+    </div>
+</body>
+
+<!-- Mirrored from lukforce.bitbucket.io/optc-cal/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 17 Oct 2017 23:43:27 GMT -->
+</html>
