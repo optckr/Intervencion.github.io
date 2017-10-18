@@ -423,7 +423,7 @@ window.effects = {
                             var boost1 = 1.0;
                             if(p.class.has('Fighter')) { boost1 = 2.0}
                             return 1*boost1; 
-                        },
+		},
         atk: function(p) {
             var id = p.number + 1,
                 matching = ((id > 1803 && id < 1806) ||
