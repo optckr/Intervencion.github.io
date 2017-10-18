@@ -415,25 +415,25 @@ window.effects = {
 //        },
         atk: function(p) { 
                             var buggy = 1.0, zoro = 1.0, lucy = 1.0;
-                            if(p.number.is('1806')) { boost1 = 2.5}
-                            if(p.number.is('1804')) { boost2 = 2.5}
-                            if(p.number.is('1794')) { boost2 = 1.2}
+                            if(p.number.is('1806')) { buggy = 2.5}
+                            if(p.number.is('1804')) { zoro = 2.5}
+                            if(p.number.is('1794')) { lucy = 1.2}
                             //console.log(boost1+" "+boost2+" "+boost3+" "+boost4+" "+boost5)
                             return 1*buggy*zoro*lucy; 
                         },
         hp: function(p) { 
                             var buggy = 1.0, zoro = 1.0, lucy = 1.0;
-                            if(p.number.is('1806')) { boost1 = 2.5}
-                            if(p.number.is('1804')) { boost2 = 2.5}
-                            if(p.number.is('1794')) { boost2 = 1.2}
+                            if(p.number.is('1806')) { buggy = 2.5}
+                            if(p.number.is('1804')) { zoro = 2.5}
+                            if(p.number.is('1794')) { lucy = 1.2}
                             //console.log(boost1+" "+boost2+" "+boost3+" "+boost4+" "+boost5)
                             return 1*buggy*zoro*lucy; 
                         },
         rcv: function(p) { 
                             var buggy = 1.0, zoro = 1.0, lucy = 1.0;
-                            if(p.number.is('1806')) { boost1 = 2.5}
-                            if(p.number.is('1804')) { boost2 = 2.5}
-                            if(p.number.is('1794')) { boost2 = 1.2}
+                            if(p.number.is('1806')) { buggy = 2.5}
+                            if(p.number.is('1804')) { zoro = 2.5}
+                            if(p.number.is('1794')) { lucy = 1.2}
                             //console.log(boost1+" "+boost2+" "+boost3+" "+boost4+" "+boost5)
                             return 1*buggy*zoro*lucy; 
                         },
