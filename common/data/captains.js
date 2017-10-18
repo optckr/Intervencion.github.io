@@ -5550,11 +5550,11 @@ window.captains = {
     },
     1805: {
         atk: function(p) { return p.unit.cost <= 30 ? 1.5 : 1; },
-        hp: function(p) { return p.unit.cost <= 30 ? 1.2 : 1; }
+        hp: function(p) { return p.unit.cost <= 30 ? 1.2 : 1; },
     },
     1806: {
         atk: function(p) { return p.unit.cost <= 30 ? 2.25 : 1; },
-        hp: function(p) { return p.unit.cost <= 30 ? 1.2 : 1; }
+        hp: function(p) { return p.unit.cost <= 30 ? 1.2 : 1; },
     },
     1807: {
         atk: function(p){ 
