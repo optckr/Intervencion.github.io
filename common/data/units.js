@@ -1821,12 +1821,12 @@ window.units = [
     [ "Tank", "DEX", [ "Powerhouse", "Striker" ], 3, 15, null, null, null, null, null, null, null, null, null, null, null ],
     [ "Ray Shop Sanji", "STR", [ "Fighter", "Powerhouse" ], 4, 13, 7, 3, 50, 392109, 184, 106, 50, 830, 475, 301, null ],
     [ "Ray Shop Sanji, Evolved", "STR", [ "Fighter", "Powerhouse" ], 5, 20, 4, 4, 99, 4000000, 815, 450, 297, 1602, 1231, 550, null ],
-    [ "World 4*", "STR", [ "Fighter", "Powerhouse" ], 5, 20, 4, 4, 99, 4000000, 815, 450, 297, 1602, 1231, 550, null ],
-    [ "World 5*", "STR", [ "Fighter", "Powerhouse" ], 5, 20, 4, 4, 99, 4000000, 815, 450, 297, 1602, 1231, 550, null ],
-    [ "Akainu 4*", "STR", [ "Fighter", "Powerhouse" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
-    [ "A-KAI-nu", "INT", [ "Fighter", "Driven" ], 5, 50, 4, 4, 99, 5000000, null, null, null, 3156, 1450, 99, null ],
-    [ "Sicilian 4*", "STR", [ "Fighter", "Powerhouse" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
-    [ "Sicilian", "INT", [ "Fighter", "Driven" ], 5, 40, 4, 4, 99, 5000000, null, null, null, 2270, 1421, 328, null ],
+    [ "Byrnndi World", "STR", [ "Shooter", "Driven" ], 4, 20, null, 3, 70, 1066998, null, null, null, null, null, null, null ],
+    [ "Byrnndi World, Evolved", "STR", [ "Shooter", "Driven" ], 5, 30, 4, 4, 99, 4000000, null, null, null, 2462, 1408, 319, null ],
+    [ "Akainu [Neo]", "INT", [ "Driven", "Fighter" ], 4, 30, 4, null, 70, 1066998, null, null, null, null, null, null, null ],
+    [ "Akainu [Neo], Magma Man", "INT", [ "Driven", "Fighter" ], 5, 50, 4, 4, 99, 5000000, 1, 1, 1, 3156, 1450, 99, null ],
+    [ "Sicilian 4*", "INT", [ "Slasher", "Powerhouse" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Sicilian", "INT", [ "Slasher", "Powerhouse" ], 5, 40, 4, 4, 99, 5000000, null, null, null, 2270, 1421, 328, null ],
     ];
     
 // [ "Name", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
