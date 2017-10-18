@@ -5549,6 +5549,17 @@ window.captains = {
         atk: function(p) { return p.unit.cost <= 30 ? 2.25 : 1; },
         hp: function(p) { return p.unit.cost <= 30 ? 1.2 : 1; }
     },
+    1807: {
+        atk: function(p){ 
+            var specialEnabled = false;
+            for(var i=0;i<2.5;i++)
+            {
+                if(window.specials[1807].turnedOn[i]==true){specialEnabled = true;}
+                if(window.specials[1808].turnedOn[i]==true){specialEnabled = true;}
+            }
+            return specialEnabled ? 3.84 : 2.5; },
+        hp: function(p) { return 1.1 }
+    },
     1808: {
         atk: function(p){ 
             var specialEnabled = false;
@@ -5558,7 +5569,7 @@ window.captains = {
                 if(window.specials[1808].turnedOn[i]==true){specialEnabled = true;}
             }
             return specialEnabled ? 3.84 : 2.5; },
-        Hhp: function(p) { return 1.1 }
+        hp: function(p) { return 1.1 }
     },
     1809: {
         hitAtk: function(p) {
