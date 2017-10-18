@@ -12657,11 +12657,17 @@ window.details = {
         specialNotes: "#{colorAffinity : 1.75}",
         specialName: "Great Eruption [Neo]",
     },
-    1826: {//Sicilian Colo
+    1826: {//Akainu
+        captain: "Boosts ATK by 2.5x following a chain of [INT] > [INT] > [INT] attacks no lower than Good",
+        special: "Deals 50x character's ATK in [INT] damage to all enemies. Changes orbs for [INT] characters into [INT] orbs. Boosts the Color Affinity of [INT] characters by 1.75x for 1 turn",
+        specialNotes: "#{colorAffinity : 1.75}",
+        specialName: "Great Eruption [Neo]",
+    },
+    1827: {//Sicilian Colo
         captain: "2,5x Atk for INT characters, 3x if your HP is under 30%",
         special: "Reduce crew HP by 50%, 2x Atk boost for INT characters and randomize non-matching orbs (block included)",
     },
-    1827: {//Sicilian Colo
+    1828: {//Sicilian Colo
         captain: "2,5x Atk for INT characters, 3x if your HP is under 30%",
         special: "Reduce crew HP by 50%, 2x Atk boost for INT characters and randomize non-matching orbs (block included)",
     },
