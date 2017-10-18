@@ -5575,13 +5575,13 @@ window.captains = {
         atk: function(p){ 
             return p.unit.class.has("Slasher") ? p.actions[p.sourceSlot] ? 3.5 : 2.5 : 1;
         },
-        hp: function(p) { return 1.3 }
+        hp: function(p) { return p.unit.class.has("Slasher") ? 1.25 : 1; },
     },
     1808: {
         atk: function(p){ 
             return p.unit.class.has("Slasher") ? p.actions[p.sourceSlot] ? 3.5 : 2.5 : 1;
         },
-        hp: function(p) { return 1.3 }
+        hp: function(p) { return p.unit.class.has("Slasher") ? 1.25 : 1; },
     },
     1809: {
         hitAtk: function(p) {
