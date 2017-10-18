@@ -3649,28 +3649,42 @@ window.specials = {
         def: function(p) { return 0.1; }
     },
     1805: {
-		def: function(p) { return .0; },
+		def: function(p) { return 0.0; },
         orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.5, [p.friendCaptain, p.captain]); }
     },
     1806: {
-		def: function(p) { return .0; },
+		def: function(p) { return 0.0; },
         orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.5, [p.friendCaptain, p.captain]); }
     },
     1807: {
+        turnedOn: [ false, false ],
+        onActivation: function(p) {
+            window.specials[1807].turnedOn[p.slot] = true;
+        },
+        onDeactivation: function(p) {
+            window.specials[1807].turnedOn[p.slot] = false;
+        },
         chain: function(p) { return p.captain.class.has("Slasher") ? 2.75 : 1; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
             return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 2.75 : 1;
         },
-        orb: function(p) { return p.unit.class.has("Slasher") ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain]) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain]); },
+        orb: function(p) { return p.unit.class.has("Slasher") ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain]) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain]); }	
     },
     1808: {
+        turnedOn: [ false, false ],
+        onActivation: function(p) {
+            window.specials[1808].turnedOn[p.slot] = true;
+        },
+        onDeactivation: function(p) {
+            window.specials[1808].turnedOn[p.slot] = false;
+        },
         chain: function(p) { return p.captain.class.has("Slasher") ? 2.75 : 1; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
             return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 2.75 : 1;
         },
-        orb: function(p) { return p.unit.class.has("Slasher") ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain]) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain]); },
+        orb: function(p) { return p.unit.class.has("Slasher") ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain]) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain]); }	
     },
     1811: {
         atk: function(p) { return p.unit.class.has("Fighter") ? 1.5 : 1; },
