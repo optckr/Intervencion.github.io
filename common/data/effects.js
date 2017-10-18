@@ -403,15 +403,16 @@ window.effects = {
         chainLimiter: function() { return 1.5; }
     },
 
-//    'Treasure Map Mihawk - Buggy & Zoro 2.5x stats boost; Lucy6* 1.2x': {
-//        description: 'Boost stats of certain characters',
-//        thumb: 1808,
-//        id: 43, // don't change this
-//        atk: function(p) {
-//            var id = p.number + 1,
-//                matching = [ 1804, 1806 ].indexOf(id) != -1);
-//            return !matching ? 2.5 : 1;
-//        },
+    'Treasure Map Mihawk - Buggy & Zoro 2.5x stats boost; Lucy6* 1.2x': {
+        description: 'Boost stats of certain characters',
+        thumb: 1808,
+        id: 43, // don't change this
+        atk: function(p) {
+            var id = p.number + 1,
+                matching = [ 1804, 1806 ].indexOf(id) != -1);
+            return !matching ? 2.5 : 1;
+        },
+	},
 //        atk: function(p) { 
 //                            var buggy = 1.0, zoro = 1.0, lucy = 1.0;
 //                            if(p.number.is('1804')) { zoro = 2.5}
