@@ -439,4 +439,4 @@ window.effects = {
 //                            return 1*buggy*zoro*lucy; 
 //                        },
 //    },
-};
+//};
