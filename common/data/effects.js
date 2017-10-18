@@ -407,35 +407,35 @@ window.effects = {
         description: 'Boost stats of certain characters',
         thumb: 1808,
         id: 43, // don't change this
-//        atk: function(p) {
-//            var id = p.number + 1,
-//                buggyzoro = [ 1804, 1806 ].indexOf(id) != -1);
+        atk: function(p) {
+            var id = p.number + 1,
+                buggyzoro = [ 1804, 1806 ].indexOf(id) != -1);
 //                sabo = [ 1794 ].indexOf(id) != -1);
-//            return buggyzoro ? 1 : 2.5, sabo ? 1 : 1.2;
-//        },
-        atk: function(p) { 
-                            var buggy = 1.0, zoro = 1.0, lucy = 1.0;
-                            if(p.number.is('1806')) { buggy = 2.5}
-                            if(p.number.is('1804')) { zoro = 2.5}
-                            if(p.number.is('1794')) { lucy = 1.2}
-                            //console.log(boost1+" "+boost2+" "+boost3+" "+boost4+" "+boost5)
-                            return 1*buggy*zoro*lucy; 
-                        },
-        hp: function(p) { 
-                            var buggy = 1.0, zoro = 1.0, lucy = 1.0;
-                            if(p.number.is('1806')) { buggy = 2.5}
-                            if(p.number.is('1804')) { zoro = 2.5}
-                            if(p.number.is('1794')) { lucy = 1.2}
-                            //console.log(boost1+" "+boost2+" "+boost3+" "+boost4+" "+boost5)
-                            return 1*buggy*zoro*lucy; 
-                        },
-        rcv: function(p) { 
-                            var buggy = 1.0, zoro = 1.0, lucy = 1.0;
-                            if(p.number.is('1806')) { buggy = 2.5}
-                            if(p.number.is('1804')) { zoro = 2.5}
-                            if(p.number.is('1794')) { lucy = 1.2}
-                            //console.log(boost1+" "+boost2+" "+boost3+" "+boost4+" "+boost5)
-                            return 1*buggy*zoro*lucy; 
-                        },
+            return buggyzoro ? 1 : 2.5;//, sabo ? 1 : 1.2;
+        },
+//        atk: function(p) { 
+//                            var buggy = 1.0, zoro = 1.0, lucy = 1.0;
+//                            if(p.number.is('1804')) { zoro = 2.5}
+//                            if(p.number.is('1806')) { buggy = 2.5}
+//                            if(p.number.is('1794')) { lucy = 1.2}
+//                            //console.log(boost1+" "+boost2+" "+boost3+" "+boost4+" "+boost5)
+//                            return 1*buggy*zoro*lucy; 
+//                        },
+//        hp: function(p) { 
+//                            var buggy = 1.0, zoro = 1.0, lucy = 1.0;
+//                            if(p.number.is('1804')) { zoro = 2.5}
+//                            if(p.number.is('1806')) { buggy = 2.5}
+//                            if(p.number.is('1794')) { lucy = 1.2}
+//                            //console.log(boost1+" "+boost2+" "+boost3+" "+boost4+" "+boost5)
+//                            return 1*buggy*zoro*lucy; 
+//                        },
+//        rcv: function(p) { 
+//                            var buggy = 1.0, zoro = 1.0, lucy = 1.0;
+//                            if(p.number.is('1804')) { zoro = 2.5}
+//                            if(p.number.is('1806')) { buggy = 2.5}
+//                            if(p.number.is('1794')) { lucy = 1.2}
+//                            //console.log(boost1+" "+boost2+" "+boost3+" "+boost4+" "+boost5)
+//                            return 1*buggy*zoro*lucy; 
+//                        },
     },
 };
