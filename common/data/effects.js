@@ -410,8 +410,7 @@ window.effects = {
         atk: function(p) {
             var id = p.number + 1,
                 buggyzoro = [ 1804, 1806 ].indexOf(id) != -1);
-//                sabo = [ 1794 ].indexOf(id) != -1);
-            return !buggyzoro ? 1 : 2.5;//, sabo ? 1 : 1.2;
+            return !buggyzoro ? 2.5 : 1;
         },
 //        atk: function(p) { 
 //                            var buggy = 1.0, zoro = 1.0, lucy = 1.0;
