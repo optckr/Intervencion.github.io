@@ -1826,7 +1826,7 @@ window.units = [
     [ "Akainu [Neo]", "INT", [ "Driven", "Fighter" ], 4, 30, 4, null, 70, 1066998, null, null, null, null, null, null, null ],
     [ "Akainu [Neo], Magma Man", "INT", [ "Driven", "Fighter" ], 5, 50, 4, 4, 99, 5000000, 1, 1, 1, 3156, 1450, 99, null ],
     [ "Sicilian Coloseum", "INT", [ "Slasher", "Free Powerhouse" ], 4, 25, null, null, 70, 1066998, null, null, null, null, null, null, null ],
-    [ "Sicilian Coloseum Evolved", "INT", [ "Slasher", "Powerhouse" ], 5, 40, 4, 4, 99, 4000000, 1, 1, 1, 2270, 1421, 328, null ],
+    [ "Sicilian Coloseum Evolved", "INT", [ "Slasher", "Powerhouse" ], null, 40, 4, 4, 99, 4000000, 1, 1, 1, 2270, 1421, 328, null ],
     ];
     
 // [ "Name", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
