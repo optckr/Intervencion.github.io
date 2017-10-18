@@ -3656,16 +3656,16 @@ window.specials = {
 		def: function(p) { return .0; },
         orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.5, [p.friendCaptain, p.captain]); }
     },
-    1807: { 
-        chain: function(p) { return p.scope.data.team[1].unit.class.has("Slasher") ? 2.75 : 1; },
-        chainLimiter: function(p) { return p.chainPosition > 0 ? 2.75 : 1.0; },
-        orb: function(p) { return (p.scope.data.team[1].unit.class.has("Slasher") && p.unit.class.has("Slasher")) ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1); }	
-    },
-    1808: { 
-        chain: function(p) { return p.scope.data.team[1].unit.class.has("Slasher") ? 2.75 : 1; },
-        chainLimiter: function(p) { return p.chainPosition > 0 ? 2.75 : 1.0; },
-        orb: function(p) { return (p.scope.data.team[1].unit.class.has("Slasher") && p.unit.class.has("Slasher")) ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1); }	
-    },
+//    1807: { 
+//        chain: function(p) { return p.scope.data.team[1].unit.class.has("Slasher") ? 2.75 : 1; },
+//        chainLimiter: function(p) { return p.chainPosition > 0 ? 2.75 : 1.0; },
+//        orb: function(p) { return (p.scope.data.team[1].unit.class.has("Slasher") && p.unit.class.has("Slasher")) ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1); }	
+//    },
+//    1808: { 
+//        chain: function(p) { return p.scope.data.team[1].unit.class.has("Slasher") ? 2.75 : 1; },
+//        chainLimiter: function(p) { return p.chainPosition > 0 ? 2.75 : 1.0; },
+//        orb: function(p) { return (p.scope.data.team[1].unit.class.has("Slasher") && p.unit.class.has("Slasher")) ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1); }	
+//    },
     1811: {
         atk: function(p) { return p.unit.class.has("Fighter") ? 1.5 : 1; },
         type: "class"
