@@ -3657,6 +3657,17 @@ window.specials = {
         orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.5, [p.friendCaptain, p.captain]); }
     },
     1807: {
+        turnedOn: [ false, false ],
+        onActivation: function(p) {
+            window.specials[1807].turnedOn[p.slot] = true;
+            p.scope.notify({
+                text: 'Only affects damage if Mihawk is your captain',
+                name: '1807warning'
+            });
+        },
+        onDeactivation: function(p) {
+            window.specials[1807].turnedOn[p.slot] = false;
+        }
         chain: function(p) { return p.captain.class.has("Slasher") ? 2.75 : 1; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
@@ -3665,6 +3676,17 @@ window.specials = {
 //        orb: function(p) { return p.unit.class.has("Slasher") ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain]) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain]); }	
     },
     1808: {
+        turnedOn: [ false, false ],
+        onActivation: function(p) {
+            window.specials[1808].turnedOn[p.slot] = true;
+            p.scope.notify({
+                text: 'Only affects damage if Mihawk is your captain',
+                name: '1808warning'
+            });
+        },
+        onDeactivation: function(p) {
+            window.specials[1808].turnedOn[p.slot] = false;
+        }
         chain: function(p) { return p.captain.class.has("Slasher") ? 2.75 : 1; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
