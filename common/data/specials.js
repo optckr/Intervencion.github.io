@@ -3662,7 +3662,7 @@ window.specials = {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
             return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 2.5 : 1;
         }
-        orb: function(p) { return (p.scope.data.team[1].unit.class.has("Slasher") && p.unit.class.has("Slasher")) ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1); }
+        orb: function(p) { return p.unit.class.has("Slasher") ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain]) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain]); }	
     },
     1808: {
         chain: function(p) { return 2.75; },
@@ -3670,7 +3670,7 @@ window.specials = {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
             return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 2.5 : 1;
         }
-        orb: function(p) { return (p.scope.data.team[1].unit.class.has("Slasher") && p.unit.class.has("Slasher")) ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1); }
+        orb: function(p) { return p.unit.class.has("Slasher") ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain]) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain]); }	
     },
     1811: {
         atk: function(p) { return p.unit.class.has("Fighter") ? 1.5 : 1; },
