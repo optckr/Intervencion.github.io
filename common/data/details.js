@@ -12498,7 +12498,7 @@ window.details = {
         specialName: "Black Blade • The Ultimate Sword",
     },
     1808: {//Mihawk
-        captain: "Boosts ATK of Slasher characters by 1.2x and their HP by 1.1x. If you use \"Black Blade • The Ultimate Sword\" boosts ATK of Slasher characters by 1.62x instead for 1 turn.",
+        captain: "Boost atk of slashers by 2.5x and HP 1.3x  If you use Mihawk's special, atk boost is increased by 1.4x (Limit Broken)",
         special: "Deals 100x character's ATK in typeless damage to all enemies, if your Captain is a Slasher character, locks the chain multiplier at 2.75x for 1 turn and  amplifies the effects of orbs for Slasher characters by 2x for 1 turn",
         specialName: "Black Blade • The Ultimate Sword",
         limit: [
