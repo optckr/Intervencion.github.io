@@ -1806,7 +1806,7 @@ window.units = [
     [ "Buggy the Clown, The Chop-Chop Man Who Can't be Sliced by a Sword", "QCK", [ "Shooter", "Driven" ], 4, 12, 5, 3, 50, 392109, 166, 87, 29, null, null, null, null ],
     [ "Captain Buggy, The Chop-Chop Man Who Can't be Sliced by a Sword", "QCK", [ "Shooter", "Driven" ], 5, 20, 4, 4, 99, 2000000, 920, 447, 112, 2143, 1000, 304, 1 ],
     [ "Hawk Eyes Mihawk", "STR", "Slasher", 4, 30, null, null, null, null, null, null, null, null, null, null, null ],
-    [ "Hawk Eyes Mihawk, The Man Standing on Top of the World as the Strongest Swordsman", "STR", "Slasher", 5, 60, 4, 5, 99, 1, 1, 1, 1, 3460, 1628, 266, 1 ],
+    [ "Hawk Eyes Mihawk, The Man Standing on Top of the World as the Strongest Swordsman", "STR", "Slasher", 5, 60, 4, 5, 99, 5000000, 847, 332, 57, 3460, 1628, 266, 1 ],
     [ "Wanda, Mokomo Dukedom", "PSY", [ "Slasher", "Free Spirit" ], 3, 13, 6, 2, 50, 392109, 184, 106, 24, 740, 530, 150, 1 ],
     [ "Kingsbird Wanda, Mokomo Dukedom", "PSY", [ "Slasher", "Free Spirit" ], 4, 20, 4, 3, 99, 3000000, 714, 501, 137, 2042, 1139, 230, 1 ],
     [ "Carrot, Mokomo Dukedom", "DEX", [ "Fighter", "Slasher" ], 3, 13, 6, 2, 50, 392109, 104, 130, 6, 726, 768, 73, 1 ],
