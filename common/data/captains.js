@@ -5623,6 +5623,12 @@ window.captains = {
         hp: function(p) { return p.unit.type == "PSY" ? 1.5 : 1; },
         rcv: function(p) { return p.unit.type == "PSY" ? 1.5 : 1; },
     },
+    1821: {
+        atk: function(p) { return 1.5; }
+    },
+    1822: {
+        atk: function(p) { return 2; }
+    },
     1823: {
         damageSorter: function(d) { return CrunchUtils.classSort(d, 3.543122, [ "Shooter" ]); },
         hitAtk: function(p) {
