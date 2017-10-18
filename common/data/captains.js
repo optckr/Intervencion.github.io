@@ -5616,6 +5616,29 @@ window.captains = {
         hitModifiers: ["Great", "Great", "Great", "Perfect", "Perfect", "Perfect"],
         hp: function(p) { return 1.2; },
     },
+    1819: {
+        atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Powerhouse") ? 1.75 : 1; },
+    },
+    1820: {
+        hp: function(p) { return p.unit.type == "PSY" ? 1.5 : 1; },
+        rcv: function(p) { return p.unit.type == "PSY" ? 1.5 : 1; },
+    },
+    1823: {
+        damageSorter: function(d) { return CrunchUtils.classSort(d, 3.543122, [ "Shooter" ]); },
+        hitAtk: function(p) {
+            if (!p.unit.class.has("Shooter")) return 1;
+            return p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]) ? 3.543122 : p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect", "Perfect"]) ? 3.22102 : p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect"]) ? 2.9282 : p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect"]) ? 2.662 : p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect"]) ? 2.42 : 2.2;
+        },
+        hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"],
+    },
+    1824: {
+        damageSorter: function(d) { return CrunchUtils.classSort(d, 3.543122, [ "Shooter" ]); },
+        hitAtk: function(p) {
+            if (!p.unit.class.has("Shooter")) return 1;
+            return p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]) ? 3.543122 : p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect", "Perfect"]) ? 3.22102 : p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect"]) ? 2.9282 : p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect"]) ? 2.662 : p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect"]) ? 2.42 : 2.2;
+        },
+        hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"],
+    },
     1825: {
         damageSorter: function(d) { return CrunchUtils.okamaSort(d, ['INT', 'INT', 'INT']); },
         hitAtk: function(p) {
