@@ -1826,7 +1826,7 @@ window.units = [
     [ "Akainu 4*", "STR", [ "Fighter", "Powerhouse" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "A-KAI-nu", "INT", [ "Fighter", "Driven" ], 5, 20, 4, 4, 99, 4000000, 815, 450, 297, 2462, 1408, 319, 1 ],
     [ "Sicilian 4*", "STR", [ "Fighter", "Powerhouse" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
-    [ "Sicilian", "INT", [ "Fighter", "Driven" ], 5, 20, 4, 4, 99, 4000000, 815, 450, 297, 2270, 1421, 328, 1 ],
+    [ "Sicilian", "INT", [ "Fighter", "Driven" ], 5, 20, 4, 4, 99, 4000000, 815, 450, 297, 2270, 1421, 328, null ],
     ];
     
 // [ "Name", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
