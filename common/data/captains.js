@@ -5541,6 +5541,13 @@ window.captains = {
     1802: {
         atk: function(p) { return (p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK") ? 2.5 : 1; }
     },
+    1803: {
+        atk: function(p) { return p.unit.class.has("Slasher") ? 2 : 1; },
+    },
+    1804: {
+        atk: function(p) { return p.unit.class.has("Slasher") ? 2.25 : 1; },
+        hp: function(p) { return p.unit.class.has("Slasher") ? 1.3 : 1; },
+    },
     1805: {
         atk: function(p) { return p.unit.cost <= 30 ? 1.5 : 1; },
         hp: function(p) { return p.unit.cost <= 30 ? 1.2 : 1; }
@@ -5549,28 +5556,6 @@ window.captains = {
         atk: function(p) { return p.unit.cost <= 30 ? 2.25 : 1; },
         hp: function(p) { return p.unit.cost <= 30 ? 1.2 : 1; }
     },
-//    1807: {
-//        atk: function(p){ 
-//            var specialEnabled = false;
-//            for(var i=0;i<2.5;i++)
-//            {
-//                if(window.specials[1807].turnedOn[i]==true){specialEnabled = true;}
-//                if(window.specials[1808].turnedOn[i]==true){specialEnabled = true;}
-//            }
-//            return specialEnabled ? 3.84 : 2.5; },
-//        hp: function(p) { return 1.3 }
-//    },
-//    1808: {
-//        atk: function(p){ 
-//            var specialEnabled = false;
-//            for(var i=0;i<2.5;i++)
-//            {
-//                if(window.specials[1807].turnedOn[i]==true){specialEnabled = true;}
-//                if(window.specials[1808].turnedOn[i]==true){specialEnabled = true;}
-//            }
-//            return specialEnabled ? 3.84 : 2.5; },
-//        hp: function(p) { return 1.3 }
-//    },
     1807: {
         atk: function(p){ 
             return p.unit.class.has("Slasher") ? p.actions[p.sourceSlot] ? 3.5 : 2.5 : 1;
