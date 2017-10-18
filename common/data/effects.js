@@ -418,17 +418,17 @@ window.effects = {
     'TMM - 2x ATK [Figther]': {
         description: 'Buff in Treasure Map [Mihawk Season]',
         thumb: 1808,
-        id: 43, // don't change this
+        id: 44, // don't change this
+        atk: function(p) { 
+                            var boost1 = 1.0;
+                            if(p.class.has('Fighter')) { boost1 = 2.0}
+                            return 1*boost1; 
+                        },
         atk: function(p) {
             var id = p.number + 1,
                 matching = ((id > 1803 && id < 1806) ||
                     [ 1804, 1806 ].indexOf(id) != -1);
             return !matching ? 2.5 : 1;
         },
-        atk: function(p) { 
-                            var boost1 = 1.0;
-                            if(p.class.has('Fighter')) { boost1 = 2.0}
-                            return 1*boost1; 
-                        },
 	},
 };
