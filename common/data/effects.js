@@ -402,5 +402,35 @@ window.effects = {
         id: 42, // don't change this
         chainLimiter: function() { return 1.5; }
     },
+
+    'Treasure Map Mihawk - Buggy & Zoro 2.5x stats boost; Lucy6* 1.2x': {
+        description: 'Boost stats of certain characters',
+        thumb: 1808,
+        id: 43, // don't change this
+        atk: function(p) { 
+                            var buggy = 1.0, zoro = 1.0, lucy = 1.0;
+                            if(p.unit.is('1806')) { boost1 = 2.5}
+                            if(p.unit.is('1804')) { boost2 = 2.5}
+                            if(p.unit.is('1794')) { boost2 = 1.2}
+                            //console.log(boost1+" "+boost2+" "+boost3+" "+boost4+" "+boost5)
+                            return 1*buggy*zoro*lucy; 
+                        },
+        hp: function(p) { 
+                            var buggy = 1.0, zoro = 1.0, lucy = 1.0;
+                            if(p.unit.is('1806')) { boost1 = 2.5}
+                            if(p.unit.is('1804')) { boost2 = 2.5}
+                            if(p.unit.is('1794')) { boost2 = 1.2}
+                            //console.log(boost1+" "+boost2+" "+boost3+" "+boost4+" "+boost5)
+                            return 1*buggy*zoro*lucy; 
+                        },
+        rcv: function(p) { 
+                            var buggy = 1.0, zoro = 1.0, lucy = 1.0;
+                            if(p.unit.is('1806')) { boost1 = 2.5}
+                            if(p.unit.is('1804')) { boost2 = 2.5}
+                            if(p.unit.is('1794')) { boost2 = 1.2}
+                            //console.log(boost1+" "+boost2+" "+boost3+" "+boost4+" "+boost5)
+                            return 1*buggy*zoro*lucy; 
+                        },
+    },
     
 };
