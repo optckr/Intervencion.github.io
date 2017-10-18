@@ -413,6 +413,7 @@ window.effects = {
             return !matching ? 2.5 : 1;
         },
 	},
+};
 //        atk: function(p) { 
 //                            var buggy = 1.0, zoro = 1.0, lucy = 1.0;
 //                            if(p.number.is('1804')) { zoro = 2.5}
