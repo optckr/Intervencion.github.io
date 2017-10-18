@@ -1821,10 +1821,12 @@ window.units = [
     [ "Tank", "DEX", [ "Powerhouse", "Striker" ], 3, 15, null, null, null, null, null, null, null, null, null, null, null ],
     [ "Ray Shop Sanji", "STR", [ "Fighter", "Powerhouse" ], 4, 13, 7, 3, 50, 392109, 184, 106, 50, 830, 475, 301, null ],
     [ "Ray Shop Sanji, Evolved", "STR", [ "Fighter", "Powerhouse" ], 5, 20, 4, 4, 99, 4000000, 815, 450, 297, 1602, 1231, 550, null ],
-    [ "1", "STR", [ "Fighter", "Powerhouse" ], 5, 20, 4, 4, 99, 4000000, 815, 450, 297, 1602, 1231, 550, null ],
-    [ "2", "STR", [ "Fighter", "Powerhouse" ], 5, 20, 4, 4, 99, 4000000, 815, 450, 297, 1602, 1231, 550, null ],
-    [ "3", "STR", [ "Fighter", "Powerhouse" ], 5, 20, 4, 4, 99, 4000000, 815, 450, 297, 1602, 1231, 550, null ],
+    [ "World 4*", "STR", [ "Fighter", "Powerhouse" ], 5, 20, 4, 4, 99, 4000000, 815, 450, 297, 1602, 1231, 550, null ],
+    [ "World 5*", "STR", [ "Fighter", "Powerhouse" ], 5, 20, 4, 4, 99, 4000000, 815, 450, 297, 1602, 1231, 550, null ],
+    [ "Akainu 4*", "STR", [ "Fighter", "Powerhouse" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "A-KAI-nu", "INT", [ "Fighter", "Driven" ], 5, 20, 4, 4, 99, 4000000, 815, 450, 297, 2462, 1408, 319, 1 ],
+    [ "Sicilian 4*", "STR", [ "Fighter", "Powerhouse" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Sicilian", "INT", [ "Fighter", "Driven" ], 5, 20, 4, 4, 99, 4000000, 815, 450, 297, 2270, 1421, 328, 1 ],
     ];
     
 // [ "Name", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
