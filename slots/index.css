@@ -5,12 +5,6 @@
 html, body, body > [ui-view] {
     height: 100%;
     cursor: default !important;
-	background-color: #2d2b2b;
-}
-
-table{
-	color: red;
-
 }
 
 #outer-container, #container {
