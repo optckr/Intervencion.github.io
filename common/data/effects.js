@@ -553,7 +553,7 @@ window.effects = {
         atk: function(p) { return p.class.has("Driven") ? 0.5 : 1; },
 	},
 	
-	'Akainu Neo - Slasher Raid Boost': {
+	'Akainu Neo': {
         description: 'Certain units boosted',
         thumb: 1826,
         id: 62, // don't change this
