@@ -411,19 +411,19 @@ window.effects = {
             var id = p.number + 1,
                 matching = ((id > 1803 && id < 1806) ||
                     [ 1804, 1806 ].indexOf(id) != -1);
-            return !matching ? 2.5 : 1;
+            return !matching ? 1 : 2.5;
         },
         hp: function(p) {
             var id = p.number + 1,
                 matching = ((id > 1803 && id < 1806) ||
                     [ 1804, 1806 ].indexOf(id) != -1);
-            return !matching ? 2.5 : 1;
+            return !matching ? 1 : 2.5;
         },
         rcv: function(p) {
             var id = p.number + 1,
                 matching = ((id > 1803 && id < 1806) ||
                     [ 1804, 1806 ].indexOf(id) != -1);
-            return !matching ? 2.5 : 1;
+            return !matching ? 1 : 2.5;
         },
 	},
 
