@@ -472,56 +472,56 @@ window.effects = {
 	},
 
     '0.5x ATK [Figther]': {
-        description: '0.5x Buff in Treasure Map [Mihawk Season]',
+        description: '0.5x Debuff in Treasure Map [Mihawk Season]',
         thumb: 1808,
         id: 52, // don't change this
         atk: function(p) { return p.class.has("Fighter") ? 0.5 : 1; },
 	},
 
     '0.5x ATK [Shooter]': {
-        description: '2x Buff in Treasure Map [Mihawk Season]',
+        description: '0.5x Debuff in Treasure Map [Mihawk Season]',
         thumb: 1808,
         id: 53, // don't change this
         atk: function(p) { return p.class.has("Shooter") ? 0.5 : 1; },
 	},
 
     '0.5x ATK [Slasher]': {
-        description: '2x Buff in Treasure Map [Mihawk Season]',
+        description: '0.5x Debuff in Treasure Map [Mihawk Season]',
         thumb: 1808,
         id: 54, // don't change this
         atk: function(p) { return p.class.has("Slasher") ? 0.5 : 1; },
 	},
 
     '0.5x ATK [Striker]': {
-        description: '2x Buff in Treasure Map [Mihawk Season]',
+        description: '0.5x Debuff in Treasure Map [Mihawk Season]',
         thumb: 1808,
         id: 55, // don't change this
         atk: function(p) { return p.class.has("Striker") ? 0.5 : 1; },
 	},
 
     '0.5x ATK [Free Spirit]': {
-        description: '2x Buff in Treasure Map [Mihawk Season]',
+        description: '0.5x Debuff in Treasure Map [Mihawk Season]',
         thumb: 1808,
         id: 56, // don't change this
         atk: function(p) { return p.class.has("Free Spirit") ? 0.5 : 1; },
 	},
 
     '0.5x ATK [Cerebral]': {
-        description: '2x Buff in Treasure Map [Mihawk Season]',
+        description: '0.5x Debuff in Treasure Map [Mihawk Season]',
         thumb: 1808,
         id: 57, // don't change this
         atk: function(p) { return p.class.has("Cerebral") ? 0.5 : 1; },
 	},
 
     '0.5x ATK [Powerhouse]': {
-        description: '2x Buff in Treasure Map [Mihawk Season]',
+        description: '0.5x Debuff in Treasure Map [Mihawk Season]',
         thumb: 1808,
         id: 58, // don't change this
         atk: function(p) { return p.class.has("Powerhouse") ? 0.5 : 1; },
 	},
 
     '0.5x ATK [Driven]': {
-        description: '2x Buff in Treasure Map [Mihawk Season]',
+        description: '0.5x Debuff in Treasure Map [Mihawk Season]',
         thumb: 1808,
         id: 59, // don't change this
         atk: function(p) { return p.class.has("Driven") ? 0.5 : 1; },
