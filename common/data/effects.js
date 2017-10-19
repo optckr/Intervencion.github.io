@@ -555,7 +555,7 @@ window.effects = {
 	
 	'Akainu Neo - Slasher Raid Boost': {
         description: 'Certain units boosted',
-        thumb: 1808,
+        thumb: 1826,
         id: 62, // don't change this
         atk: function(p) {
             var id = p.number + 1,
