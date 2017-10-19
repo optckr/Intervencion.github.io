@@ -23,7 +23,8 @@ body {
     font-family: "Open Sans";
     font-size: 13px;
     text-align: center;
-     overflow: hidden;
+	overflow: hidden;
+	background-color: #2d2b2b;
 }
 
 #container {
@@ -165,4 +166,8 @@ body {
 
 .block-icon:before {
     content: "\e902";
+}
+
+table{
+	color: red;
 }
