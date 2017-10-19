@@ -1,6 +1,11 @@
 html, body {
     height: 100%;
     cursor: default !important;
+	background-color: #2d2b2b;
+}
+
+table{
+	color: red;
 }
 
 #main {
