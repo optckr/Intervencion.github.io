@@ -403,11 +403,23 @@ window.effects = {
         chainLimiter: function() { return 1.5; }
     },
 
-    'Treasure Map Mihawk - Buggy & Zoro 2.5x stats boost': {
-        description: 'Boost stats of certain characters',
+    'Treasure Map [Mihawk Season]': {
+        description: 'Boost stats of Buggy & Zoro 2.5x',
         thumb: 1808,
         id: 43, // don't change this
         atk: function(p) {
+            var id = p.number + 1,
+                matching = ((id > 1803 && id < 1806) ||
+                    [ 1804, 1806 ].indexOf(id) != -1);
+            return !matching ? 2.5 : 1;
+        },
+        hp: function(p) {
+            var id = p.number + 1,
+                matching = ((id > 1803 && id < 1806) ||
+                    [ 1804, 1806 ].indexOf(id) != -1);
+            return !matching ? 2.5 : 1;
+        },
+        rcv: function(p) {
             var id = p.number + 1,
                 matching = ((id > 1803 && id < 1806) ||
                     [ 1804, 1806 ].indexOf(id) != -1);
@@ -524,6 +536,20 @@ window.effects = {
         description: '0.5x Debuff in Treasure Map [Mihawk Season]',
         thumb: 1808,
         id: 59, // don't change this
+        atk: function(p) { return p.class.has("Driven") ? 0.5 : 1; },
+	},
+
+    '2x ATK': {
+        description: '2x Buff in Treasure Map [Mihawk Season]',
+        thumb: 1808,
+        id: 60, // don't change this
+        atk: function(p) { return p.class.has("Driven") ? 2 : 1; },
+	},
+
+    '0.5x ATK': {
+        description: '0.5x Debuff in Treasure Map [Mihawk Season]',
+        thumb: 1808,
+        id: 61, // don't change this
         atk: function(p) { return p.class.has("Driven") ? 0.5 : 1; },
 	},
 };
