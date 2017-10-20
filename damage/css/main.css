@@ -22,12 +22,6 @@ body, html {
     position: relative;
     overflow: hidden;
     cursor: default !important;
-    background-color: #2d2b2b
-}
-
-div#hp
-{
-    color: #f00 !important;
 }
 
 #main {
